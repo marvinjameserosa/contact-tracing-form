@@ -1,0 +1,34 @@
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.exe
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.deps.json
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.runtimeconfig.json
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.pdb
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.csproj.AssemblyReference.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact_Tracing_Form.index.resources
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.csproj.GenerateResource.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.AssemblyInfoInputs.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.AssemblyInfo.cs
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.csproj.CoreCompileInputs.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\refint\Contact Tracing Form.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.pdb
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.genruntimeconfig.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\opp\sample\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\ref\Contact Tracing Form.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.exe
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.deps.json
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.runtimeconfig.json
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\Contact Tracing Form.pdb
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.csproj.AssemblyReference.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact_Tracing_Form.index.resources
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.csproj.GenerateResource.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.AssemblyInfoInputs.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.AssemblyInfo.cs
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.csproj.CoreCompileInputs.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\refint\Contact Tracing Form.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.pdb
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.genruntimeconfig.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\ref\Contact Tracing Form.dll
