@@ -42,10 +42,10 @@
             this.cityInput = new System.Windows.Forms.TextBox();
             this.barangay = new System.Windows.Forms.Label();
             this.brgyInput = new System.Windows.Forms.TextBox();
+            this.emailAdd = new System.Windows.Forms.Label();
+            this.eaInput = new System.Windows.Forms.TextBox();
             this.zipCode = new System.Windows.Forms.Label();
             this.zcInput = new System.Windows.Forms.TextBox();
-            this.emailAdd = new System.Windows.Forms.Label();
-            this.stInput = new System.Windows.Forms.TextBox();
             this.lastName = new System.Windows.Forms.Label();
             this.lnInput = new System.Windows.Forms.TextBox();
             this.contactNo = new System.Windows.Forms.Label();
@@ -168,6 +168,7 @@
             this.submitBTN.Text = "SUBMIT";
             this.submitBTN.UseVisualStyleBackColor = false;
             this.submitBTN.Visible = false;
+            this.submitBTN.Click += new System.EventHandler(this.submitBTN_Click);
             // 
             // contactInfo
             // 
@@ -177,10 +178,10 @@
             this.contactInfo.Controls.Add(this.cityInput);
             this.contactInfo.Controls.Add(this.barangay);
             this.contactInfo.Controls.Add(this.brgyInput);
+            this.contactInfo.Controls.Add(this.emailAdd);
+            this.contactInfo.Controls.Add(this.eaInput);
             this.contactInfo.Controls.Add(this.zipCode);
             this.contactInfo.Controls.Add(this.zcInput);
-            this.contactInfo.Controls.Add(this.emailAdd);
-            this.contactInfo.Controls.Add(this.stInput);
             this.contactInfo.Controls.Add(this.lastName);
             this.contactInfo.Controls.Add(this.lnInput);
             this.contactInfo.Controls.Add(this.contactNo);
@@ -243,39 +244,39 @@
             this.brgyInput.Size = new System.Drawing.Size(200, 23);
             this.brgyInput.TabIndex = 6;
             // 
-            // zipCode
-            // 
-            this.zipCode.AutoSize = true;
-            this.zipCode.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.zipCode.Location = new System.Drawing.Point(259, 100);
-            this.zipCode.Name = "zipCode";
-            this.zipCode.Size = new System.Drawing.Size(62, 18);
-            this.zipCode.TabIndex = 30;
-            this.zipCode.Text = "Zip Code";
-            // 
-            // zcInput
-            // 
-            this.zcInput.Location = new System.Drawing.Point(259, 130);
-            this.zcInput.Name = "zcInput";
-            this.zcInput.Size = new System.Drawing.Size(200, 23);
-            this.zcInput.TabIndex = 4;
-            // 
             // emailAdd
             // 
             this.emailAdd.AutoSize = true;
             this.emailAdd.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.emailAdd.Location = new System.Drawing.Point(30, 175);
+            this.emailAdd.Location = new System.Drawing.Point(259, 100);
             this.emailAdd.Name = "emailAdd";
             this.emailAdd.Size = new System.Drawing.Size(95, 18);
-            this.emailAdd.TabIndex = 28;
+            this.emailAdd.TabIndex = 30;
             this.emailAdd.Text = "Email Address";
             // 
-            // stInput
+            // eaInput
             // 
-            this.stInput.Location = new System.Drawing.Point(30, 205);
-            this.stInput.Name = "stInput";
-            this.stInput.Size = new System.Drawing.Size(200, 23);
-            this.stInput.TabIndex = 5;
+            this.eaInput.Location = new System.Drawing.Point(259, 130);
+            this.eaInput.Name = "eaInput";
+            this.eaInput.Size = new System.Drawing.Size(200, 23);
+            this.eaInput.TabIndex = 4;
+            // 
+            // zipCode
+            // 
+            this.zipCode.AutoSize = true;
+            this.zipCode.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.zipCode.Location = new System.Drawing.Point(30, 175);
+            this.zipCode.Name = "zipCode";
+            this.zipCode.Size = new System.Drawing.Size(62, 18);
+            this.zipCode.TabIndex = 28;
+            this.zipCode.Text = "Zip Code";
+            // 
+            // zcInput
+            // 
+            this.zcInput.Location = new System.Drawing.Point(30, 205);
+            this.zcInput.Name = "zcInput";
+            this.zcInput.Size = new System.Drawing.Size(200, 23);
+            this.zcInput.TabIndex = 5;
             // 
             // lastName
             // 
@@ -341,6 +342,7 @@
             // 
             // healthQuestionnaire
             // 
+            this.healthQuestionnaire.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.healthQuestionnaire.Controls.Add(this.Q4panel);
             this.healthQuestionnaire.Controls.Add(this.Q3panel);
             this.healthQuestionnaire.Controls.Add(this.Q2panel);
@@ -600,10 +602,10 @@
         private TextBox cityInput;
         private Label barangay;
         private TextBox brgyInput;
+        private Label emailAdd;
+        private TextBox eaInput;
         private Label zipCode;
         private TextBox zcInput;
-        private Label emailAdd;
-        private TextBox stInput;
         private Label lastName;
         private TextBox lnInput;
         private Label contactNo;
