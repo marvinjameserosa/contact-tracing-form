@@ -34,8 +34,8 @@ namespace Contact_Tracing_Form
 
             // CONTACT INFO
 
-            data.WriteLine("First Name: " + lnInput.Text);
-            data.WriteLine("Last Name: " + fnInput.Text);
+            data.WriteLine("First Name: " + fnInput.Text);
+            data.WriteLine("Last Name: " + lnInput.Text);
             data.WriteLine("Contact Number: " + cnInput.Text);
             data.WriteLine("Email Address: " + eaInput.Text);
             data.WriteLine("Zip Code: " + zcInput.Text);
@@ -85,6 +85,30 @@ namespace Contact_Tracing_Form
             data.WriteLine();
             data.Close();
             MessageBox.Show("Thanks for submitting :)");
+
+            // RESET FUNCTION
+
+            contactInfoNav.PerformClick();
+            fnInput.Text = "";
+            lnInput.Text = "";
+            cnInput.Text = "";
+            eaInput.Text = "";
+            zcInput.Text = "";
+            brgyInput.Text = "";
+            cityInput.Text = "";
+            regInput.Text = "";
+            tempInput.Text = "";
+            timeInput.Text = "";
+            dateInput.Text = "";
+
+            Q1Y.Checked = false;
+            Q1N.Checked = false;
+            Q2Y.Checked = false;
+            Q2N.Checked = false;
+            Q3Y.Checked = false;
+            Q3N.Checked = false;
+            Q4Y.Checked = false;
+            Q4N.Checked = false;
         }
     }
 }
