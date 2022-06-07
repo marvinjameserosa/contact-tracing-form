@@ -54,6 +54,10 @@
             this.fnInput = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
             this.healthQuestionnaire = new System.Windows.Forms.Panel();
+            this.date = new System.Windows.Forms.Label();
+            this.dateInput = new System.Windows.Forms.TextBox();
+            this.time = new System.Windows.Forms.Label();
+            this.timeInput = new System.Windows.Forms.TextBox();
             this.Q4panel = new System.Windows.Forms.Panel();
             this.Q4Y = new System.Windows.Forms.RadioButton();
             this.Q4N = new System.Windows.Forms.RadioButton();
@@ -71,7 +75,7 @@
             this.Q2 = new System.Windows.Forms.Label();
             this.Q1 = new System.Windows.Forms.Label();
             this.temp = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tempInput = new System.Windows.Forms.TextBox();
             this.header.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.body.SuspendLayout();
@@ -343,6 +347,10 @@
             // healthQuestionnaire
             // 
             this.healthQuestionnaire.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.healthQuestionnaire.Controls.Add(this.date);
+            this.healthQuestionnaire.Controls.Add(this.dateInput);
+            this.healthQuestionnaire.Controls.Add(this.time);
+            this.healthQuestionnaire.Controls.Add(this.timeInput);
             this.healthQuestionnaire.Controls.Add(this.Q4panel);
             this.healthQuestionnaire.Controls.Add(this.Q3panel);
             this.healthQuestionnaire.Controls.Add(this.Q2panel);
@@ -352,12 +360,48 @@
             this.healthQuestionnaire.Controls.Add(this.Q2);
             this.healthQuestionnaire.Controls.Add(this.Q1);
             this.healthQuestionnaire.Controls.Add(this.temp);
-            this.healthQuestionnaire.Controls.Add(this.textBox1);
+            this.healthQuestionnaire.Controls.Add(this.tempInput);
             this.healthQuestionnaire.Location = new System.Drawing.Point(74, 155);
             this.healthQuestionnaire.Name = "healthQuestionnaire";
             this.healthQuestionnaire.Size = new System.Drawing.Size(486, 323);
             this.healthQuestionnaire.TabIndex = 37;
             this.healthQuestionnaire.Visible = false;
+            // 
+            // date
+            // 
+            this.date.AutoSize = true;
+            this.date.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.date.Location = new System.Drawing.Point(311, 27);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(37, 18);
+            this.date.TabIndex = 14;
+            this.date.Text = "Date";
+            // 
+            // dateInput
+            // 
+            this.dateInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateInput.Location = new System.Drawing.Point(348, 27);
+            this.dateInput.Name = "dateInput";
+            this.dateInput.Size = new System.Drawing.Size(111, 23);
+            this.dateInput.TabIndex = 15;
+            // 
+            // time
+            // 
+            this.time.AutoSize = true;
+            this.time.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.time.Location = new System.Drawing.Point(177, 25);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(39, 18);
+            this.time.TabIndex = 12;
+            this.time.Text = "Time";
+            // 
+            // timeInput
+            // 
+            this.timeInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.timeInput.Location = new System.Drawing.Point(222, 27);
+            this.timeInput.Name = "timeInput";
+            this.timeInput.Size = new System.Drawing.Size(83, 23);
+            this.timeInput.TabIndex = 13;
             // 
             // Q4panel
             // 
@@ -542,13 +586,13 @@
             this.temp.TabIndex = 0;
             this.temp.Text = "Temperature";
             // 
-            // textBox1
+            // tempInput
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(122, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(49, 23);
-            this.textBox1.TabIndex = 11;
+            this.tempInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tempInput.Location = new System.Drawing.Point(122, 25);
+            this.tempInput.Name = "tempInput";
+            this.tempInput.Size = new System.Drawing.Size(49, 23);
+            this.tempInput.TabIndex = 11;
             // 
             // index
             // 
@@ -616,7 +660,7 @@
         private RadioButton Q1Y;
         private Label Q1;
         private Label temp;
-        private TextBox textBox1;
+        private TextBox tempInput;
         private Label Q3;
         private Label Q2;
         private RadioButton Q1N;
@@ -631,5 +675,9 @@
         private Panel Q2panel;
         private RadioButton Q2Y;
         private RadioButton Q2N;
+        private Label date;
+        private TextBox dateInput;
+        private Label time;
+        private TextBox timeInput;
     }
 }
