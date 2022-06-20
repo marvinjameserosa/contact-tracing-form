@@ -42,8 +42,18 @@ namespace Contact_Tracing_Form
 
         private void submitBTN_Click(object sender, EventArgs e)
         {
+            checker();
+        }
+
+        private void write()
+        {
             StreamWriter data = new StreamWriter(@"C:\Users\Public\Desktop\test\data.txt", true);
 
+            // DATE INFO
+            data.Write("Date: " + monthInput.Text + "/");
+            data.Write(dayInput.Text + "/");
+            data.WriteLine(yearInput.Text);
+            data.WriteLine("Time: " + timeInput.Text);
 
             // CONTACT INFO
 
@@ -55,13 +65,12 @@ namespace Contact_Tracing_Form
             data.WriteLine("Barangay: " + brgyInput.Text);
             data.WriteLine("City: " + cityInput.Text);
             data.WriteLine("Region: " + regInput.Text);
-            
+
 
             // HEALTH QUESTIONNAIRE
 
             data.WriteLine("Temperature: " + tempInput.Text);
-            data.WriteLine("Time: " + timeInput.Text);
-            data.WriteLine("Date: " + dateInput.Text);
+
             if (Q1Y.Checked)
             {
                 data.WriteLine("Q1: YES");
@@ -98,9 +107,11 @@ namespace Contact_Tracing_Form
             data.WriteLine();
             data.Close();
             MessageBox.Show("Thanks for submitting :)");
+        }
 
-            // RESET FUNCTION
-
+        // RESET FUNCTION
+        private void reset()
+        {
             contactInfoNav.PerformClick();
             fnInput.Text = "";
             lnInput.Text = "";
@@ -112,7 +123,7 @@ namespace Contact_Tracing_Form
             regInput.Text = "";
             tempInput.Text = "";
             timeInput.Text = "";
-            dateInput.Text = "";
+            monthInput.Text = "";
 
             Q1Y.Checked = false;
             Q1N.Checked = false;
@@ -123,7 +134,26 @@ namespace Contact_Tracing_Form
             Q4Y.Checked = false;
             Q4N.Checked = false;
         }
-
+       
+        // DATE VARIABLE
+        private void checker()
+        {
+            try
+            {
+                int monthVar = Int32.Parse(monthInput.Text);
+                int dayVar = Int32.Parse(dayInput.Text); ;
+                int yearVar = Int32.Parse(yearInput.Text);
+                write();
+                reset();
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Check the date");
+            }
+            
+        }
         
+
     }
 }

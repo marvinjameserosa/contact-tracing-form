@@ -33,29 +33,19 @@
             this.contactInfoNav = new System.Windows.Forms.Button();
             this.healthQuestionnaireNav = new System.Windows.Forms.Button();
             this.navPanel = new System.Windows.Forms.Panel();
+            this.recordNav = new System.Windows.Forms.Button();
             this.body = new System.Windows.Forms.Panel();
             this.submitBTN = new System.Windows.Forms.Button();
-            this.contactInfo = new System.Windows.Forms.Panel();
-            this.region = new System.Windows.Forms.Label();
-            this.regInput = new System.Windows.Forms.TextBox();
-            this.city = new System.Windows.Forms.Label();
-            this.cityInput = new System.Windows.Forms.TextBox();
-            this.barangay = new System.Windows.Forms.Label();
-            this.brgyInput = new System.Windows.Forms.TextBox();
-            this.emailAdd = new System.Windows.Forms.Label();
-            this.eaInput = new System.Windows.Forms.TextBox();
-            this.zipCode = new System.Windows.Forms.Label();
-            this.zcInput = new System.Windows.Forms.TextBox();
-            this.lastName = new System.Windows.Forms.Label();
-            this.lnInput = new System.Windows.Forms.TextBox();
-            this.contactNo = new System.Windows.Forms.Label();
-            this.cnInput = new System.Windows.Forms.TextBox();
-            this.firstName = new System.Windows.Forms.Label();
-            this.fnInput = new System.Windows.Forms.TextBox();
-            this.title = new System.Windows.Forms.Label();
             this.healthQuestionnaire = new System.Windows.Forms.Panel();
+            this.day = new System.Windows.Forms.Label();
+            this.year = new System.Windows.Forms.Label();
+            this.yearInput = new System.Windows.Forms.TextBox();
+            this.slash2 = new System.Windows.Forms.Label();
+            this.dayInput = new System.Windows.Forms.TextBox();
+            this.slash1 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
-            this.dateInput = new System.Windows.Forms.TextBox();
+            this.monthInput = new System.Windows.Forms.TextBox();
+            this.month = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
             this.timeInput = new System.Windows.Forms.TextBox();
             this.Q4panel = new System.Windows.Forms.Panel();
@@ -76,16 +66,33 @@
             this.Q1 = new System.Windows.Forms.Label();
             this.temp = new System.Windows.Forms.Label();
             this.tempInput = new System.Windows.Forms.TextBox();
-            this.recordNav = new System.Windows.Forms.Button();
+            this.contactInfo = new System.Windows.Forms.Panel();
+            this.region = new System.Windows.Forms.Label();
+            this.regInput = new System.Windows.Forms.TextBox();
+            this.city = new System.Windows.Forms.Label();
+            this.cityInput = new System.Windows.Forms.TextBox();
+            this.barangay = new System.Windows.Forms.Label();
+            this.brgyInput = new System.Windows.Forms.TextBox();
+            this.emailAdd = new System.Windows.Forms.Label();
+            this.eaInput = new System.Windows.Forms.TextBox();
+            this.zipCode = new System.Windows.Forms.Label();
+            this.zcInput = new System.Windows.Forms.TextBox();
+            this.lastName = new System.Windows.Forms.Label();
+            this.lnInput = new System.Windows.Forms.TextBox();
+            this.contactNo = new System.Windows.Forms.Label();
+            this.cnInput = new System.Windows.Forms.TextBox();
+            this.firstName = new System.Windows.Forms.Label();
+            this.fnInput = new System.Windows.Forms.TextBox();
+            this.title = new System.Windows.Forms.Label();
             this.header.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.body.SuspendLayout();
-            this.contactInfo.SuspendLayout();
             this.healthQuestionnaire.SuspendLayout();
             this.Q4panel.SuspendLayout();
             this.Q3panel.SuspendLayout();
             this.Q2panel.SuspendLayout();
             this.Q1panel.SuspendLayout();
+            this.contactInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTitle
@@ -148,12 +155,26 @@
             this.navPanel.Size = new System.Drawing.Size(490, 81);
             this.navPanel.TabIndex = 0;
             // 
+            // recordNav
+            // 
+            this.recordNav.BackColor = System.Drawing.Color.White;
+            this.recordNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recordNav.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.recordNav.Location = new System.Drawing.Point(326, 14);
+            this.recordNav.Name = "recordNav";
+            this.recordNav.Size = new System.Drawing.Size(134, 54);
+            this.recordNav.TabIndex = 11;
+            this.recordNav.Text = "RECORDS";
+            this.recordNav.UseVisualStyleBackColor = false;
+            this.recordNav.Click += new System.EventHandler(this.recordNav_Click);
+            // 
             // body
             // 
             this.body.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.body.BackColor = System.Drawing.Color.Transparent;
             this.body.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.body.Controls.Add(this.submitBTN);
+            this.body.Controls.Add(this.healthQuestionnaire);
             this.body.Controls.Add(this.contactInfo);
             this.body.Controls.Add(this.title);
             this.body.ForeColor = System.Drawing.Color.Black;
@@ -176,181 +197,18 @@
             this.submitBTN.Visible = false;
             this.submitBTN.Click += new System.EventHandler(this.submitBTN_Click);
             // 
-            // contactInfo
-            // 
-            this.contactInfo.Controls.Add(this.region);
-            this.contactInfo.Controls.Add(this.regInput);
-            this.contactInfo.Controls.Add(this.city);
-            this.contactInfo.Controls.Add(this.cityInput);
-            this.contactInfo.Controls.Add(this.barangay);
-            this.contactInfo.Controls.Add(this.brgyInput);
-            this.contactInfo.Controls.Add(this.emailAdd);
-            this.contactInfo.Controls.Add(this.eaInput);
-            this.contactInfo.Controls.Add(this.zipCode);
-            this.contactInfo.Controls.Add(this.zcInput);
-            this.contactInfo.Controls.Add(this.lastName);
-            this.contactInfo.Controls.Add(this.lnInput);
-            this.contactInfo.Controls.Add(this.contactNo);
-            this.contactInfo.Controls.Add(this.cnInput);
-            this.contactInfo.Controls.Add(this.firstName);
-            this.contactInfo.Controls.Add(this.fnInput);
-            this.contactInfo.Location = new System.Drawing.Point(0, 50);
-            this.contactInfo.Name = "contactInfo";
-            this.contactInfo.Size = new System.Drawing.Size(489, 371);
-            this.contactInfo.TabIndex = 0;
-            // 
-            // region
-            // 
-            this.region.AutoSize = true;
-            this.region.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.region.Location = new System.Drawing.Point(259, 248);
-            this.region.Name = "region";
-            this.region.Size = new System.Drawing.Size(51, 18);
-            this.region.TabIndex = 36;
-            this.region.Text = "Region";
-            // 
-            // regInput
-            // 
-            this.regInput.Location = new System.Drawing.Point(259, 278);
-            this.regInput.Name = "regInput";
-            this.regInput.Size = new System.Drawing.Size(200, 23);
-            this.regInput.TabIndex = 8;
-            // 
-            // city
-            // 
-            this.city.AutoSize = true;
-            this.city.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.city.Location = new System.Drawing.Point(30, 248);
-            this.city.Name = "city";
-            this.city.Size = new System.Drawing.Size(32, 18);
-            this.city.TabIndex = 34;
-            this.city.Text = "City";
-            // 
-            // cityInput
-            // 
-            this.cityInput.Location = new System.Drawing.Point(30, 278);
-            this.cityInput.Name = "cityInput";
-            this.cityInput.Size = new System.Drawing.Size(200, 23);
-            this.cityInput.TabIndex = 7;
-            // 
-            // barangay
-            // 
-            this.barangay.AutoSize = true;
-            this.barangay.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.barangay.Location = new System.Drawing.Point(259, 175);
-            this.barangay.Name = "barangay";
-            this.barangay.Size = new System.Drawing.Size(64, 18);
-            this.barangay.TabIndex = 32;
-            this.barangay.Text = "Barangay";
-            // 
-            // brgyInput
-            // 
-            this.brgyInput.Location = new System.Drawing.Point(259, 205);
-            this.brgyInput.Name = "brgyInput";
-            this.brgyInput.Size = new System.Drawing.Size(200, 23);
-            this.brgyInput.TabIndex = 6;
-            // 
-            // emailAdd
-            // 
-            this.emailAdd.AutoSize = true;
-            this.emailAdd.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.emailAdd.Location = new System.Drawing.Point(259, 100);
-            this.emailAdd.Name = "emailAdd";
-            this.emailAdd.Size = new System.Drawing.Size(95, 18);
-            this.emailAdd.TabIndex = 30;
-            this.emailAdd.Text = "Email Address";
-            // 
-            // eaInput
-            // 
-            this.eaInput.Location = new System.Drawing.Point(259, 130);
-            this.eaInput.Name = "eaInput";
-            this.eaInput.Size = new System.Drawing.Size(200, 23);
-            this.eaInput.TabIndex = 4;
-            // 
-            // zipCode
-            // 
-            this.zipCode.AutoSize = true;
-            this.zipCode.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.zipCode.Location = new System.Drawing.Point(30, 175);
-            this.zipCode.Name = "zipCode";
-            this.zipCode.Size = new System.Drawing.Size(62, 18);
-            this.zipCode.TabIndex = 28;
-            this.zipCode.Text = "Zip Code";
-            // 
-            // zcInput
-            // 
-            this.zcInput.Location = new System.Drawing.Point(30, 205);
-            this.zcInput.Name = "zcInput";
-            this.zcInput.Size = new System.Drawing.Size(200, 23);
-            this.zcInput.TabIndex = 5;
-            // 
-            // lastName
-            // 
-            this.lastName.AutoSize = true;
-            this.lastName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lastName.Location = new System.Drawing.Point(259, 22);
-            this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(72, 18);
-            this.lastName.TabIndex = 26;
-            this.lastName.Text = "Last Name";
-            // 
-            // lnInput
-            // 
-            this.lnInput.Location = new System.Drawing.Point(259, 55);
-            this.lnInput.Name = "lnInput";
-            this.lnInput.Size = new System.Drawing.Size(200, 23);
-            this.lnInput.TabIndex = 2;
-            // 
-            // contactNo
-            // 
-            this.contactNo.AutoSize = true;
-            this.contactNo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.contactNo.Location = new System.Drawing.Point(30, 100);
-            this.contactNo.Name = "contactNo";
-            this.contactNo.Size = new System.Drawing.Size(109, 18);
-            this.contactNo.TabIndex = 24;
-            this.contactNo.Text = "Contact Number";
-            // 
-            // cnInput
-            // 
-            this.cnInput.Location = new System.Drawing.Point(30, 130);
-            this.cnInput.Name = "cnInput";
-            this.cnInput.Size = new System.Drawing.Size(200, 23);
-            this.cnInput.TabIndex = 3;
-            // 
-            // firstName
-            // 
-            this.firstName.AutoSize = true;
-            this.firstName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.firstName.Location = new System.Drawing.Point(30, 25);
-            this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(75, 18);
-            this.firstName.TabIndex = 22;
-            this.firstName.Text = "First Name";
-            // 
-            // fnInput
-            // 
-            this.fnInput.Location = new System.Drawing.Point(30, 55);
-            this.fnInput.Name = "fnInput";
-            this.fnInput.Size = new System.Drawing.Size(200, 23);
-            this.fnInput.TabIndex = 1;
-            // 
-            // title
-            // 
-            this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.title.ForeColor = System.Drawing.Color.Black;
-            this.title.Location = new System.Drawing.Point(30, 23);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(212, 24);
-            this.title.TabIndex = 0;
-            this.title.Text = "CONTACT INFORMATION";
-            // 
             // healthQuestionnaire
             // 
             this.healthQuestionnaire.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.healthQuestionnaire.Controls.Add(this.day);
+            this.healthQuestionnaire.Controls.Add(this.year);
+            this.healthQuestionnaire.Controls.Add(this.yearInput);
+            this.healthQuestionnaire.Controls.Add(this.slash2);
+            this.healthQuestionnaire.Controls.Add(this.dayInput);
+            this.healthQuestionnaire.Controls.Add(this.slash1);
             this.healthQuestionnaire.Controls.Add(this.date);
-            this.healthQuestionnaire.Controls.Add(this.dateInput);
+            this.healthQuestionnaire.Controls.Add(this.monthInput);
+            this.healthQuestionnaire.Controls.Add(this.month);
             this.healthQuestionnaire.Controls.Add(this.time);
             this.healthQuestionnaire.Controls.Add(this.timeInput);
             this.healthQuestionnaire.Controls.Add(this.Q4panel);
@@ -363,35 +221,106 @@
             this.healthQuestionnaire.Controls.Add(this.Q1);
             this.healthQuestionnaire.Controls.Add(this.temp);
             this.healthQuestionnaire.Controls.Add(this.tempInput);
-            this.healthQuestionnaire.Location = new System.Drawing.Point(74, 155);
+            this.healthQuestionnaire.Location = new System.Drawing.Point(0, 50);
             this.healthQuestionnaire.Name = "healthQuestionnaire";
-            this.healthQuestionnaire.Size = new System.Drawing.Size(486, 323);
+            this.healthQuestionnaire.Size = new System.Drawing.Size(486, 317);
             this.healthQuestionnaire.TabIndex = 37;
             this.healthQuestionnaire.Visible = false;
+            // 
+            // day
+            // 
+            this.day.AutoSize = true;
+            this.day.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.day.ForeColor = System.Drawing.Color.Black;
+            this.day.Location = new System.Drawing.Point(380, 9);
+            this.day.Name = "day";
+            this.day.Size = new System.Drawing.Size(23, 14);
+            this.day.TabIndex = 27;
+            this.day.Text = "DD";
+            // 
+            // year
+            // 
+            this.year.AutoSize = true;
+            this.year.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.year.ForeColor = System.Drawing.Color.Black;
+            this.year.Location = new System.Drawing.Point(432, 9);
+            this.year.Name = "year";
+            this.year.Size = new System.Drawing.Size(31, 14);
+            this.year.TabIndex = 26;
+            this.year.Text = "YYYY";
+            // 
+            // yearInput
+            // 
+            this.yearInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.yearInput.Location = new System.Drawing.Point(432, 24);
+            this.yearInput.Name = "yearInput";
+            this.yearInput.Size = new System.Drawing.Size(46, 23);
+            this.yearInput.TabIndex = 25;
+            // 
+            // slash2
+            // 
+            this.slash2.AutoSize = true;
+            this.slash2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.slash2.ForeColor = System.Drawing.Color.Black;
+            this.slash2.Location = new System.Drawing.Point(418, 27);
+            this.slash2.Name = "slash2";
+            this.slash2.Size = new System.Drawing.Size(15, 19);
+            this.slash2.TabIndex = 24;
+            this.slash2.Text = "/";
+            // 
+            // dayInput
+            // 
+            this.dayInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dayInput.Location = new System.Drawing.Point(380, 26);
+            this.dayInput.Name = "dayInput";
+            this.dayInput.Size = new System.Drawing.Size(32, 23);
+            this.dayInput.TabIndex = 23;
+            // 
+            // slash1
+            // 
+            this.slash1.AutoSize = true;
+            this.slash1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.slash1.ForeColor = System.Drawing.Color.Black;
+            this.slash1.Location = new System.Drawing.Point(359, 26);
+            this.slash1.Name = "slash1";
+            this.slash1.Size = new System.Drawing.Size(15, 19);
+            this.slash1.TabIndex = 22;
+            this.slash1.Text = "/";
             // 
             // date
             // 
             this.date.AutoSize = true;
             this.date.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.date.Location = new System.Drawing.Point(311, 27);
+            this.date.Location = new System.Drawing.Point(278, 26);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(37, 18);
             this.date.TabIndex = 14;
             this.date.Text = "Date";
             // 
-            // dateInput
+            // monthInput
             // 
-            this.dateInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateInput.Location = new System.Drawing.Point(348, 27);
-            this.dateInput.Name = "dateInput";
-            this.dateInput.Size = new System.Drawing.Size(111, 23);
-            this.dateInput.TabIndex = 15;
+            this.monthInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.monthInput.Location = new System.Drawing.Point(321, 25);
+            this.monthInput.Name = "monthInput";
+            this.monthInput.Size = new System.Drawing.Size(32, 23);
+            this.monthInput.TabIndex = 15;
+            // 
+            // month
+            // 
+            this.month.AutoSize = true;
+            this.month.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.month.ForeColor = System.Drawing.Color.Black;
+            this.month.Location = new System.Drawing.Point(321, 8);
+            this.month.Name = "month";
+            this.month.Size = new System.Drawing.Size(27, 14);
+            this.month.TabIndex = 21;
+            this.month.Text = "MM";
             // 
             // time
             // 
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.time.Location = new System.Drawing.Point(177, 25);
+            this.time.Location = new System.Drawing.Point(159, 26);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(39, 18);
             this.time.TabIndex = 12;
@@ -400,9 +329,9 @@
             // timeInput
             // 
             this.timeInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.timeInput.Location = new System.Drawing.Point(222, 27);
+            this.timeInput.Location = new System.Drawing.Point(204, 22);
             this.timeInput.Name = "timeInput";
-            this.timeInput.Size = new System.Drawing.Size(83, 23);
+            this.timeInput.Size = new System.Drawing.Size(57, 23);
             this.timeInput.TabIndex = 13;
             // 
             // Q4panel
@@ -591,23 +520,180 @@
             // tempInput
             // 
             this.tempInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tempInput.Location = new System.Drawing.Point(122, 25);
+            this.tempInput.Location = new System.Drawing.Point(122, 22);
             this.tempInput.Name = "tempInput";
-            this.tempInput.Size = new System.Drawing.Size(49, 23);
+            this.tempInput.Size = new System.Drawing.Size(31, 23);
             this.tempInput.TabIndex = 11;
             // 
-            // recordNav
+            // contactInfo
             // 
-            this.recordNav.BackColor = System.Drawing.Color.White;
-            this.recordNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.recordNav.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.recordNav.Location = new System.Drawing.Point(326, 14);
-            this.recordNav.Name = "recordNav";
-            this.recordNav.Size = new System.Drawing.Size(134, 54);
-            this.recordNav.TabIndex = 11;
-            this.recordNav.Text = "RECORDS";
-            this.recordNav.UseVisualStyleBackColor = false;
-            this.recordNav.Click += new System.EventHandler(this.recordNav_Click);
+            this.contactInfo.Controls.Add(this.region);
+            this.contactInfo.Controls.Add(this.regInput);
+            this.contactInfo.Controls.Add(this.city);
+            this.contactInfo.Controls.Add(this.cityInput);
+            this.contactInfo.Controls.Add(this.barangay);
+            this.contactInfo.Controls.Add(this.brgyInput);
+            this.contactInfo.Controls.Add(this.emailAdd);
+            this.contactInfo.Controls.Add(this.eaInput);
+            this.contactInfo.Controls.Add(this.zipCode);
+            this.contactInfo.Controls.Add(this.zcInput);
+            this.contactInfo.Controls.Add(this.lastName);
+            this.contactInfo.Controls.Add(this.lnInput);
+            this.contactInfo.Controls.Add(this.contactNo);
+            this.contactInfo.Controls.Add(this.cnInput);
+            this.contactInfo.Controls.Add(this.firstName);
+            this.contactInfo.Controls.Add(this.fnInput);
+            this.contactInfo.Location = new System.Drawing.Point(0, 50);
+            this.contactInfo.Name = "contactInfo";
+            this.contactInfo.Size = new System.Drawing.Size(489, 316);
+            this.contactInfo.TabIndex = 0;
+            // 
+            // region
+            // 
+            this.region.AutoSize = true;
+            this.region.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.region.Location = new System.Drawing.Point(259, 248);
+            this.region.Name = "region";
+            this.region.Size = new System.Drawing.Size(51, 18);
+            this.region.TabIndex = 36;
+            this.region.Text = "Region";
+            // 
+            // regInput
+            // 
+            this.regInput.Location = new System.Drawing.Point(259, 278);
+            this.regInput.Name = "regInput";
+            this.regInput.Size = new System.Drawing.Size(200, 23);
+            this.regInput.TabIndex = 8;
+            // 
+            // city
+            // 
+            this.city.AutoSize = true;
+            this.city.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.city.Location = new System.Drawing.Point(30, 248);
+            this.city.Name = "city";
+            this.city.Size = new System.Drawing.Size(32, 18);
+            this.city.TabIndex = 34;
+            this.city.Text = "City";
+            // 
+            // cityInput
+            // 
+            this.cityInput.Location = new System.Drawing.Point(30, 278);
+            this.cityInput.Name = "cityInput";
+            this.cityInput.Size = new System.Drawing.Size(200, 23);
+            this.cityInput.TabIndex = 7;
+            // 
+            // barangay
+            // 
+            this.barangay.AutoSize = true;
+            this.barangay.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.barangay.Location = new System.Drawing.Point(259, 175);
+            this.barangay.Name = "barangay";
+            this.barangay.Size = new System.Drawing.Size(64, 18);
+            this.barangay.TabIndex = 32;
+            this.barangay.Text = "Barangay";
+            // 
+            // brgyInput
+            // 
+            this.brgyInput.Location = new System.Drawing.Point(259, 205);
+            this.brgyInput.Name = "brgyInput";
+            this.brgyInput.Size = new System.Drawing.Size(200, 23);
+            this.brgyInput.TabIndex = 6;
+            // 
+            // emailAdd
+            // 
+            this.emailAdd.AutoSize = true;
+            this.emailAdd.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.emailAdd.Location = new System.Drawing.Point(259, 100);
+            this.emailAdd.Name = "emailAdd";
+            this.emailAdd.Size = new System.Drawing.Size(95, 18);
+            this.emailAdd.TabIndex = 30;
+            this.emailAdd.Text = "Email Address";
+            // 
+            // eaInput
+            // 
+            this.eaInput.Location = new System.Drawing.Point(259, 130);
+            this.eaInput.Name = "eaInput";
+            this.eaInput.Size = new System.Drawing.Size(200, 23);
+            this.eaInput.TabIndex = 4;
+            // 
+            // zipCode
+            // 
+            this.zipCode.AutoSize = true;
+            this.zipCode.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.zipCode.Location = new System.Drawing.Point(30, 175);
+            this.zipCode.Name = "zipCode";
+            this.zipCode.Size = new System.Drawing.Size(62, 18);
+            this.zipCode.TabIndex = 28;
+            this.zipCode.Text = "Zip Code";
+            // 
+            // zcInput
+            // 
+            this.zcInput.Location = new System.Drawing.Point(30, 205);
+            this.zcInput.Name = "zcInput";
+            this.zcInput.Size = new System.Drawing.Size(200, 23);
+            this.zcInput.TabIndex = 5;
+            // 
+            // lastName
+            // 
+            this.lastName.AutoSize = true;
+            this.lastName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lastName.Location = new System.Drawing.Point(259, 22);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(72, 18);
+            this.lastName.TabIndex = 26;
+            this.lastName.Text = "Last Name";
+            // 
+            // lnInput
+            // 
+            this.lnInput.Location = new System.Drawing.Point(259, 55);
+            this.lnInput.Name = "lnInput";
+            this.lnInput.Size = new System.Drawing.Size(200, 23);
+            this.lnInput.TabIndex = 2;
+            // 
+            // contactNo
+            // 
+            this.contactNo.AutoSize = true;
+            this.contactNo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contactNo.Location = new System.Drawing.Point(30, 100);
+            this.contactNo.Name = "contactNo";
+            this.contactNo.Size = new System.Drawing.Size(109, 18);
+            this.contactNo.TabIndex = 24;
+            this.contactNo.Text = "Contact Number";
+            // 
+            // cnInput
+            // 
+            this.cnInput.Location = new System.Drawing.Point(30, 130);
+            this.cnInput.Name = "cnInput";
+            this.cnInput.Size = new System.Drawing.Size(200, 23);
+            this.cnInput.TabIndex = 3;
+            // 
+            // firstName
+            // 
+            this.firstName.AutoSize = true;
+            this.firstName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.firstName.Location = new System.Drawing.Point(30, 25);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(75, 18);
+            this.firstName.TabIndex = 22;
+            this.firstName.Text = "First Name";
+            // 
+            // fnInput
+            // 
+            this.fnInput.Location = new System.Drawing.Point(30, 55);
+            this.fnInput.Name = "fnInput";
+            this.fnInput.Size = new System.Drawing.Size(200, 23);
+            this.fnInput.TabIndex = 1;
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.title.ForeColor = System.Drawing.Color.Black;
+            this.title.Location = new System.Drawing.Point(30, 23);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(212, 24);
+            this.title.TabIndex = 0;
+            this.title.Text = "CONTACT INFORMATION";
             // 
             // index
             // 
@@ -615,7 +701,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 656);
-            this.Controls.Add(this.healthQuestionnaire);
             this.Controls.Add(this.body);
             this.Controls.Add(this.navPanel);
             this.Controls.Add(this.header);
@@ -627,8 +712,6 @@
             this.navPanel.ResumeLayout(false);
             this.body.ResumeLayout(false);
             this.body.PerformLayout();
-            this.contactInfo.ResumeLayout(false);
-            this.contactInfo.PerformLayout();
             this.healthQuestionnaire.ResumeLayout(false);
             this.healthQuestionnaire.PerformLayout();
             this.Q4panel.ResumeLayout(false);
@@ -639,6 +722,8 @@
             this.Q2panel.PerformLayout();
             this.Q1panel.ResumeLayout(false);
             this.Q1panel.PerformLayout();
+            this.contactInfo.ResumeLayout(false);
+            this.contactInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -691,9 +776,16 @@
         private RadioButton Q2Y;
         private RadioButton Q2N;
         private Label date;
-        private TextBox dateInput;
+        private TextBox monthInput;
         private Label time;
         private TextBox timeInput;
         private Button recordNav;
+        private Label month;
+        private Label slash1;
+        private Label slash2;
+        private TextBox dayInput;
+        private TextBox yearInput;
+        private Label day;
+        private Label year;
     }
 }
