@@ -11,6 +11,8 @@ namespace Contact_Tracing_Form
         
         private void contactInfoNav_Click(object sender, EventArgs e)
         {
+            mainTitle.Text = "Contact Tracing Form";
+            mainTitle.Left = this.Width / 2 - 123;
             title.Text = "CONTACT INFORMATION";
             contactInfo.Visible = true;
             healthQuestionnaire.Visible = false;
@@ -19,12 +21,23 @@ namespace Contact_Tracing_Form
 
         private void healthQuestionnaireNav_Click(object sender, EventArgs e)
         {
+            mainTitle.Text = "Contact Tracing Form";
+            mainTitle.Left = this.Width / 2 - 123;
             title.Text = "HEALTH QUESTIONNAIRE";
             contactInfo.Visible = false;
             healthQuestionnaire.Visible = true;
             submitBTN.Visible = true;
         }
 
+        private void recordNav_Click(object sender, EventArgs e)
+        {
+            mainTitle.Text = "Copy of Records";
+            mainTitle.Left = this.Width / 2 - 95;
+            title.Text = "RECORDS";
+            contactInfo.Visible = false;
+            healthQuestionnaire.Visible = false;
+            submitBTN.Visible = false;
+        }
         // SAVE FUNCTION
 
         private void submitBTN_Click(object sender, EventArgs e)
@@ -110,5 +123,7 @@ namespace Contact_Tracing_Form
             Q4Y.Checked = false;
             Q4N.Checked = false;
         }
+
+        
     }
 }

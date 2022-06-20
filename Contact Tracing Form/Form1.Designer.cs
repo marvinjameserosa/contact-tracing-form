@@ -76,6 +76,7 @@
             this.Q1 = new System.Windows.Forms.Label();
             this.temp = new System.Windows.Forms.Label();
             this.tempInput = new System.Windows.Forms.TextBox();
+            this.recordNav = new System.Windows.Forms.Button();
             this.header.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.body.SuspendLayout();
@@ -115,9 +116,9 @@
             this.contactInfoNav.BackColor = System.Drawing.Color.White;
             this.contactInfoNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactInfoNav.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.contactInfoNav.Location = new System.Drawing.Point(42, 14);
+            this.contactInfoNav.Location = new System.Drawing.Point(31, 14);
             this.contactInfoNav.Name = "contactInfoNav";
-            this.contactInfoNav.Size = new System.Drawing.Size(195, 35);
+            this.contactInfoNav.Size = new System.Drawing.Size(134, 54);
             this.contactInfoNav.TabIndex = 9;
             this.contactInfoNav.Text = "CONTACT INFORMATION";
             this.contactInfoNav.UseVisualStyleBackColor = false;
@@ -128,9 +129,9 @@
             this.healthQuestionnaireNav.BackColor = System.Drawing.Color.White;
             this.healthQuestionnaireNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.healthQuestionnaireNav.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.healthQuestionnaireNav.Location = new System.Drawing.Point(258, 14);
+            this.healthQuestionnaireNav.Location = new System.Drawing.Point(178, 14);
             this.healthQuestionnaireNav.Name = "healthQuestionnaireNav";
-            this.healthQuestionnaireNav.Size = new System.Drawing.Size(195, 35);
+            this.healthQuestionnaireNav.Size = new System.Drawing.Size(134, 54);
             this.healthQuestionnaireNav.TabIndex = 10;
             this.healthQuestionnaireNav.Text = "HEALTH QUESTIONNAIRE";
             this.healthQuestionnaireNav.UseVisualStyleBackColor = false;
@@ -139,11 +140,12 @@
             // navPanel
             // 
             this.navPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.navPanel.Controls.Add(this.recordNav);
             this.navPanel.Controls.Add(this.healthQuestionnaireNav);
             this.navPanel.Controls.Add(this.contactInfoNav);
             this.navPanel.Location = new System.Drawing.Point(73, 563);
             this.navPanel.Name = "navPanel";
-            this.navPanel.Size = new System.Drawing.Size(490, 60);
+            this.navPanel.Size = new System.Drawing.Size(490, 81);
             this.navPanel.TabIndex = 0;
             // 
             // body
@@ -594,6 +596,19 @@
             this.tempInput.Size = new System.Drawing.Size(49, 23);
             this.tempInput.TabIndex = 11;
             // 
+            // recordNav
+            // 
+            this.recordNav.BackColor = System.Drawing.Color.White;
+            this.recordNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recordNav.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.recordNav.Location = new System.Drawing.Point(326, 14);
+            this.recordNav.Name = "recordNav";
+            this.recordNav.Size = new System.Drawing.Size(134, 54);
+            this.recordNav.TabIndex = 11;
+            this.recordNav.Text = "RECORDS";
+            this.recordNav.UseVisualStyleBackColor = false;
+            this.recordNav.Click += new System.EventHandler(this.recordNav_Click);
+            // 
             // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -679,5 +694,6 @@
         private TextBox dateInput;
         private Label time;
         private TextBox timeInput;
+        private Button recordNav;
     }
 }
