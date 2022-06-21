@@ -268,10 +268,23 @@ namespace Contact_Tracing_Form
             
             
         }
-
+        int turn = 0;
         private void search_Click(object sender, EventArgs e)
         {
-            reader();
+            turn ++;
+            if (turn == 1)
+            {
+                recordDisplay.Text = "";
+                reader();
+            }
+            if (turn == 2)
+            {
+                recordDisplay.Text = "";
+                turn = 0;
+                reader();
+                
+            }
+            
         }
     }
 }
