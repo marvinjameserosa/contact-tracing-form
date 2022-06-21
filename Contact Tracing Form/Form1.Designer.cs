@@ -84,6 +84,10 @@
             this.firstName = new System.Windows.Forms.Label();
             this.fnInput = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
+            this.recordPanel = new System.Windows.Forms.Panel();
+            this.trial = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.header.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.body.SuspendLayout();
@@ -93,6 +97,7 @@
             this.Q2panel.SuspendLayout();
             this.Q1panel.SuspendLayout();
             this.contactInfo.SuspendLayout();
+            this.recordPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTitle
@@ -113,7 +118,7 @@
             this.header.AutoSize = true;
             this.header.BackColor = System.Drawing.Color.Black;
             this.header.Controls.Add(this.mainTitle);
-            this.header.Location = new System.Drawing.Point(0, 0);
+            this.header.Location = new System.Drawing.Point(609, 0);
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(635, 75);
             this.header.TabIndex = 0;
@@ -150,7 +155,7 @@
             this.navPanel.Controls.Add(this.recordNav);
             this.navPanel.Controls.Add(this.healthQuestionnaireNav);
             this.navPanel.Controls.Add(this.contactInfoNav);
-            this.navPanel.Location = new System.Drawing.Point(73, 563);
+            this.navPanel.Location = new System.Drawing.Point(682, 563);
             this.navPanel.Name = "navPanel";
             this.navPanel.Size = new System.Drawing.Size(490, 81);
             this.navPanel.TabIndex = 0;
@@ -178,7 +183,7 @@
             this.body.Controls.Add(this.contactInfo);
             this.body.Controls.Add(this.title);
             this.body.ForeColor = System.Drawing.Color.Black;
-            this.body.Location = new System.Drawing.Point(73, 110);
+            this.body.Location = new System.Drawing.Point(682, 110);
             this.body.Name = "body";
             this.body.Size = new System.Drawing.Size(490, 422);
             this.body.TabIndex = 0;
@@ -695,12 +700,50 @@
             this.title.TabIndex = 0;
             this.title.Text = "CONTACT INFORMATION";
             // 
+            // recordPanel
+            // 
+            this.recordPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.recordPanel.Controls.Add(this.trial);
+            this.recordPanel.Controls.Add(this.textBox1);
+            this.recordPanel.Controls.Add(this.textBox2);
+            this.recordPanel.Location = new System.Drawing.Point(55, 170);
+            this.recordPanel.Name = "recordPanel";
+            this.recordPanel.Size = new System.Drawing.Size(486, 317);
+            this.recordPanel.TabIndex = 39;
+            this.recordPanel.Visible = false;
+            // 
+            // trial
+            // 
+            this.trial.AutoSize = true;
+            this.trial.Location = new System.Drawing.Point(61, 54);
+            this.trial.Name = "trial";
+            this.trial.Size = new System.Drawing.Size(38, 15);
+            this.trial.TabIndex = 26;
+            this.trial.Text = "label1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(718, 240);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(46, 23);
+            this.textBox1.TabIndex = 25;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Location = new System.Drawing.Point(666, 242);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(32, 23);
+            this.textBox2.TabIndex = 23;
+            // 
             // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(634, 656);
+            this.ClientSize = new System.Drawing.Size(1853, 656);
+            this.Controls.Add(this.recordPanel);
             this.Controls.Add(this.body);
             this.Controls.Add(this.navPanel);
             this.Controls.Add(this.header);
@@ -724,6 +767,8 @@
             this.Q1panel.PerformLayout();
             this.contactInfo.ResumeLayout(false);
             this.contactInfo.PerformLayout();
+            this.recordPanel.ResumeLayout(false);
+            this.recordPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -787,5 +832,9 @@
         private TextBox yearInput;
         private Label day;
         private Label year;
+        private Panel recordPanel;
+        private Label trial;
+        private TextBox textBox1;
+        private TextBox textBox2;
     }
 }

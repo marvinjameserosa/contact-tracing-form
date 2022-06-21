@@ -36,13 +36,15 @@ namespace Contact_Tracing_Form
             title.Text = "RECORDS";
             contactInfo.Visible = false;
             healthQuestionnaire.Visible = false;
+            recordPanel.Visible = true;
             submitBTN.Visible = false;
+            reader();
         }
         // SAVE FUNCTION
 
         private void submitBTN_Click(object sender, EventArgs e)
         {
-            checker();
+            datachecker();
         }
 
         private void write()
@@ -124,6 +126,8 @@ namespace Contact_Tracing_Form
             tempInput.Text = "";
             timeInput.Text = "";
             monthInput.Text = "";
+            dayInput.Text = "";
+            yearInput.Text = "";
 
             Q1Y.Checked = false;
             Q1N.Checked = false;
@@ -135,8 +139,23 @@ namespace Contact_Tracing_Form
             Q4N.Checked = false;
         }
        
-        // DATE VARIABLE
-        private void checker()
+        // DATA FILLIED OUT CHECKER
+
+        private void datachecker()
+        {
+            if (fnInput.Text.Length > 0 && lnInput.Text.Length > 0 && cnInput.Text.Length > 0 && eaInput.Text.Length > 0 && zcInput.Text.Length > 0
+            && brgyInput.Text.Length > 0 && cityInput.Text.Length > 0 && regInput.Text.Length > 0 && tempInput.Text.Length > 0 && timeInput.Text.Length > 0
+            && monthInput.Text.Length > 0)
+            {
+                datechecker();
+            }
+            else
+            {
+                MessageBox.Show("Please check if everything is filled out");
+            }
+        }
+        // DATE CHECKER
+        private void datechecker()
         {
             try
             {
@@ -154,6 +173,11 @@ namespace Contact_Tracing_Form
             
         }
         
+        private void reader()
+        {
+            StreamReader streamReader = File.OpenText(@"C:\Users\Public\Desktop\test\data.txt");
+            trial.Text = streamReader.ReadToEnd();
+        }
 
     }
 }
