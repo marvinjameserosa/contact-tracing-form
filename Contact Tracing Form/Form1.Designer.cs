@@ -35,10 +35,16 @@
             this.navPanel = new System.Windows.Forms.Panel();
             this.recordNav = new System.Windows.Forms.Button();
             this.body = new System.Windows.Forms.Panel();
+            this.recordPanel = new System.Windows.Forms.Panel();
+            this.yearSearch = new System.Windows.Forms.TextBox();
+            this.search = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.daySearch = new System.Windows.Forms.TextBox();
+            this.recordDisplay = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.monthSearch = new System.Windows.Forms.TextBox();
             this.submitBTN = new System.Windows.Forms.Button();
             this.healthQuestionnaire = new System.Windows.Forms.Panel();
-            this.day = new System.Windows.Forms.Label();
-            this.year = new System.Windows.Forms.Label();
             this.yearInput = new System.Windows.Forms.TextBox();
             this.slash2 = new System.Windows.Forms.Label();
             this.dayInput = new System.Windows.Forms.TextBox();
@@ -84,20 +90,16 @@
             this.firstName = new System.Windows.Forms.Label();
             this.fnInput = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
-            this.recordPanel = new System.Windows.Forms.Panel();
-            this.trial = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.header.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.body.SuspendLayout();
+            this.recordPanel.SuspendLayout();
             this.healthQuestionnaire.SuspendLayout();
             this.Q4panel.SuspendLayout();
             this.Q3panel.SuspendLayout();
             this.Q2panel.SuspendLayout();
             this.Q1panel.SuspendLayout();
             this.contactInfo.SuspendLayout();
-            this.recordPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTitle
@@ -118,7 +120,7 @@
             this.header.AutoSize = true;
             this.header.BackColor = System.Drawing.Color.Black;
             this.header.Controls.Add(this.mainTitle);
-            this.header.Location = new System.Drawing.Point(609, 0);
+            this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(635, 75);
             this.header.TabIndex = 0;
@@ -155,7 +157,7 @@
             this.navPanel.Controls.Add(this.recordNav);
             this.navPanel.Controls.Add(this.healthQuestionnaireNav);
             this.navPanel.Controls.Add(this.contactInfoNav);
-            this.navPanel.Location = new System.Drawing.Point(682, 563);
+            this.navPanel.Location = new System.Drawing.Point(73, 563);
             this.navPanel.Name = "navPanel";
             this.navPanel.Size = new System.Drawing.Size(490, 81);
             this.navPanel.TabIndex = 0;
@@ -178,15 +180,106 @@
             this.body.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.body.BackColor = System.Drawing.Color.Transparent;
             this.body.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.body.Controls.Add(this.recordPanel);
             this.body.Controls.Add(this.submitBTN);
             this.body.Controls.Add(this.healthQuestionnaire);
             this.body.Controls.Add(this.contactInfo);
             this.body.Controls.Add(this.title);
             this.body.ForeColor = System.Drawing.Color.Black;
-            this.body.Location = new System.Drawing.Point(682, 110);
+            this.body.Location = new System.Drawing.Point(73, 110);
             this.body.Name = "body";
             this.body.Size = new System.Drawing.Size(490, 422);
             this.body.TabIndex = 0;
+            // 
+            // recordPanel
+            // 
+            this.recordPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.recordPanel.Controls.Add(this.yearSearch);
+            this.recordPanel.Controls.Add(this.search);
+            this.recordPanel.Controls.Add(this.label1);
+            this.recordPanel.Controls.Add(this.daySearch);
+            this.recordPanel.Controls.Add(this.recordDisplay);
+            this.recordPanel.Controls.Add(this.label2);
+            this.recordPanel.Controls.Add(this.monthSearch);
+            this.recordPanel.Location = new System.Drawing.Point(3, 50);
+            this.recordPanel.Name = "recordPanel";
+            this.recordPanel.Size = new System.Drawing.Size(486, 351);
+            this.recordPanel.TabIndex = 38;
+            this.recordPanel.Visible = false;
+            // 
+            // yearSearch
+            // 
+            this.yearSearch.Location = new System.Drawing.Point(146, 12);
+            this.yearSearch.Name = "yearSearch";
+            this.yearSearch.PlaceholderText = " YYYY";
+            this.yearSearch.Size = new System.Drawing.Size(40, 23);
+            this.yearSearch.TabIndex = 30;
+            // 
+            // search
+            // 
+            this.search.BackColor = System.Drawing.Color.White;
+            this.search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.search.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.search.Location = new System.Drawing.Point(212, 7);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(110, 28);
+            this.search.TabIndex = 38;
+            this.search.Text = "SEARCH";
+            this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(126, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 19);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "/";
+            // 
+            // daySearch
+            // 
+            this.daySearch.Location = new System.Drawing.Point(88, 12);
+            this.daySearch.Name = "daySearch";
+            this.daySearch.PlaceholderText = " DD";
+            this.daySearch.Size = new System.Drawing.Size(32, 23);
+            this.daySearch.TabIndex = 28;
+            // 
+            // recordDisplay
+            // 
+            this.recordDisplay.BackColor = System.Drawing.Color.White;
+            this.recordDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.recordDisplay.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.recordDisplay.ForeColor = System.Drawing.Color.Black;
+            this.recordDisplay.Location = new System.Drawing.Point(28, 48);
+            this.recordDisplay.Multiline = true;
+            this.recordDisplay.Name = "recordDisplay";
+            this.recordDisplay.ReadOnly = true;
+            this.recordDisplay.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.recordDisplay.Size = new System.Drawing.Size(427, 255);
+            this.recordDisplay.TabIndex = 39;
+            this.recordDisplay.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(68, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 19);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "/";
+            // 
+            // monthSearch
+            // 
+            this.monthSearch.Location = new System.Drawing.Point(28, 12);
+            this.monthSearch.Name = "monthSearch";
+            this.monthSearch.PlaceholderText = " MM";
+            this.monthSearch.Size = new System.Drawing.Size(35, 23);
+            this.monthSearch.TabIndex = 26;
             // 
             // submitBTN
             // 
@@ -205,8 +298,6 @@
             // healthQuestionnaire
             // 
             this.healthQuestionnaire.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.healthQuestionnaire.Controls.Add(this.day);
-            this.healthQuestionnaire.Controls.Add(this.year);
             this.healthQuestionnaire.Controls.Add(this.yearInput);
             this.healthQuestionnaire.Controls.Add(this.slash2);
             this.healthQuestionnaire.Controls.Add(this.dayInput);
@@ -232,34 +323,13 @@
             this.healthQuestionnaire.TabIndex = 37;
             this.healthQuestionnaire.Visible = false;
             // 
-            // day
-            // 
-            this.day.AutoSize = true;
-            this.day.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.day.ForeColor = System.Drawing.Color.Black;
-            this.day.Location = new System.Drawing.Point(380, 9);
-            this.day.Name = "day";
-            this.day.Size = new System.Drawing.Size(23, 14);
-            this.day.TabIndex = 27;
-            this.day.Text = "DD";
-            // 
-            // year
-            // 
-            this.year.AutoSize = true;
-            this.year.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.year.ForeColor = System.Drawing.Color.Black;
-            this.year.Location = new System.Drawing.Point(432, 9);
-            this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(31, 14);
-            this.year.TabIndex = 26;
-            this.year.Text = "YYYY";
-            // 
             // yearInput
             // 
             this.yearInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.yearInput.Location = new System.Drawing.Point(432, 24);
+            this.yearInput.Location = new System.Drawing.Point(428, 20);
             this.yearInput.Name = "yearInput";
-            this.yearInput.Size = new System.Drawing.Size(46, 23);
+            this.yearInput.PlaceholderText = " YYYY";
+            this.yearInput.Size = new System.Drawing.Size(40, 23);
             this.yearInput.TabIndex = 25;
             // 
             // slash2
@@ -267,7 +337,7 @@
             this.slash2.AutoSize = true;
             this.slash2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.slash2.ForeColor = System.Drawing.Color.Black;
-            this.slash2.Location = new System.Drawing.Point(418, 27);
+            this.slash2.Location = new System.Drawing.Point(408, 22);
             this.slash2.Name = "slash2";
             this.slash2.Size = new System.Drawing.Size(15, 19);
             this.slash2.TabIndex = 24;
@@ -276,8 +346,9 @@
             // dayInput
             // 
             this.dayInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dayInput.Location = new System.Drawing.Point(380, 26);
+            this.dayInput.Location = new System.Drawing.Point(370, 20);
             this.dayInput.Name = "dayInput";
+            this.dayInput.PlaceholderText = " DD";
             this.dayInput.Size = new System.Drawing.Size(32, 23);
             this.dayInput.TabIndex = 23;
             // 
@@ -286,7 +357,7 @@
             this.slash1.AutoSize = true;
             this.slash1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.slash1.ForeColor = System.Drawing.Color.Black;
-            this.slash1.Location = new System.Drawing.Point(359, 26);
+            this.slash1.Location = new System.Drawing.Point(350, 22);
             this.slash1.Name = "slash1";
             this.slash1.Size = new System.Drawing.Size(15, 19);
             this.slash1.TabIndex = 22;
@@ -296,7 +367,7 @@
             // 
             this.date.AutoSize = true;
             this.date.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.date.Location = new System.Drawing.Point(278, 26);
+            this.date.Location = new System.Drawing.Point(267, 24);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(37, 18);
             this.date.TabIndex = 14;
@@ -305,9 +376,10 @@
             // monthInput
             // 
             this.monthInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.monthInput.Location = new System.Drawing.Point(321, 25);
+            this.monthInput.Location = new System.Drawing.Point(310, 20);
             this.monthInput.Name = "monthInput";
-            this.monthInput.Size = new System.Drawing.Size(32, 23);
+            this.monthInput.PlaceholderText = " MM";
+            this.monthInput.Size = new System.Drawing.Size(35, 23);
             this.monthInput.TabIndex = 15;
             // 
             // month
@@ -317,15 +389,14 @@
             this.month.ForeColor = System.Drawing.Color.Black;
             this.month.Location = new System.Drawing.Point(321, 8);
             this.month.Name = "month";
-            this.month.Size = new System.Drawing.Size(27, 14);
+            this.month.Size = new System.Drawing.Size(0, 14);
             this.month.TabIndex = 21;
-            this.month.Text = "MM";
             // 
             // time
             // 
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.time.Location = new System.Drawing.Point(159, 26);
+            this.time.Location = new System.Drawing.Point(160, 25);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(39, 18);
             this.time.TabIndex = 12;
@@ -334,7 +405,7 @@
             // timeInput
             // 
             this.timeInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.timeInput.Location = new System.Drawing.Point(204, 22);
+            this.timeInput.Location = new System.Drawing.Point(204, 20);
             this.timeInput.Name = "timeInput";
             this.timeInput.Size = new System.Drawing.Size(57, 23);
             this.timeInput.TabIndex = 13;
@@ -525,7 +596,7 @@
             // tempInput
             // 
             this.tempInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tempInput.Location = new System.Drawing.Point(122, 22);
+            this.tempInput.Location = new System.Drawing.Point(120, 20);
             this.tempInput.Name = "tempInput";
             this.tempInput.Size = new System.Drawing.Size(31, 23);
             this.tempInput.TabIndex = 11;
@@ -700,50 +771,12 @@
             this.title.TabIndex = 0;
             this.title.Text = "CONTACT INFORMATION";
             // 
-            // recordPanel
-            // 
-            this.recordPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.recordPanel.Controls.Add(this.trial);
-            this.recordPanel.Controls.Add(this.textBox1);
-            this.recordPanel.Controls.Add(this.textBox2);
-            this.recordPanel.Location = new System.Drawing.Point(55, 170);
-            this.recordPanel.Name = "recordPanel";
-            this.recordPanel.Size = new System.Drawing.Size(486, 317);
-            this.recordPanel.TabIndex = 39;
-            this.recordPanel.Visible = false;
-            // 
-            // trial
-            // 
-            this.trial.AutoSize = true;
-            this.trial.Location = new System.Drawing.Point(61, 54);
-            this.trial.Name = "trial";
-            this.trial.Size = new System.Drawing.Size(38, 15);
-            this.trial.TabIndex = 26;
-            this.trial.Text = "label1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(718, 240);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(46, 23);
-            this.textBox1.TabIndex = 25;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(666, 242);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(32, 23);
-            this.textBox2.TabIndex = 23;
-            // 
             // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1853, 656);
-            this.Controls.Add(this.recordPanel);
+            this.ClientSize = new System.Drawing.Size(634, 656);
             this.Controls.Add(this.body);
             this.Controls.Add(this.navPanel);
             this.Controls.Add(this.header);
@@ -755,6 +788,8 @@
             this.navPanel.ResumeLayout(false);
             this.body.ResumeLayout(false);
             this.body.PerformLayout();
+            this.recordPanel.ResumeLayout(false);
+            this.recordPanel.PerformLayout();
             this.healthQuestionnaire.ResumeLayout(false);
             this.healthQuestionnaire.PerformLayout();
             this.Q4panel.ResumeLayout(false);
@@ -767,8 +802,6 @@
             this.Q1panel.PerformLayout();
             this.contactInfo.ResumeLayout(false);
             this.contactInfo.PerformLayout();
-            this.recordPanel.ResumeLayout(false);
-            this.recordPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -830,11 +863,13 @@
         private Label slash2;
         private TextBox dayInput;
         private TextBox yearInput;
-        private Label day;
-        private Label year;
         private Panel recordPanel;
-        private Label trial;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button search;
+        private TextBox yearSearch;
+        private Label label1;
+        private TextBox daySearch;
+        private Label label2;
+        private TextBox monthSearch;
+        internal TextBox recordDisplay;
     }
 }

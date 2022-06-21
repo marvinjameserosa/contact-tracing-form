@@ -16,6 +16,7 @@ namespace Contact_Tracing_Form
             title.Text = "CONTACT INFORMATION";
             contactInfo.Visible = true;
             healthQuestionnaire.Visible = false;
+            recordPanel.Visible = false;
             submitBTN.Visible = false;
         }
 
@@ -26,6 +27,7 @@ namespace Contact_Tracing_Form
             title.Text = "HEALTH QUESTIONNAIRE";
             contactInfo.Visible = false;
             healthQuestionnaire.Visible = true;
+            recordPanel.Visible = false;
             submitBTN.Visible = true;
         }
 
@@ -38,7 +40,7 @@ namespace Contact_Tracing_Form
             healthQuestionnaire.Visible = false;
             recordPanel.Visible = true;
             submitBTN.Visible = false;
-            reader();
+            
         }
         // SAVE FUNCTION
 
@@ -51,6 +53,11 @@ namespace Contact_Tracing_Form
         {
             StreamWriter data = new StreamWriter(@"C:\Users\Public\Desktop\test\data.txt", true);
 
+            // ID
+            data.Write(yearInput.Text);
+            data.Write(monthInput.Text);
+            data.WriteLine(dayInput.Text);
+
             // DATE INFO
             data.Write("Date: " + monthInput.Text + "/");
             data.Write(dayInput.Text + "/");
@@ -59,8 +66,7 @@ namespace Contact_Tracing_Form
 
             // CONTACT INFO
 
-            data.WriteLine("First Name: " + fnInput.Text);
-            data.WriteLine("Last Name: " + lnInput.Text);
+            data.WriteLine("Name: " + lnInput.Text + ", " + fnInput.Text);
             data.WriteLine("Contact Number: " + cnInput.Text);
             data.WriteLine("Email Address: " + eaInput.Text);
             data.WriteLine("Zip Code: " + zcInput.Text);
@@ -106,7 +112,6 @@ namespace Contact_Tracing_Form
                 data.WriteLine("Q4: NO");
             }
 
-            data.WriteLine();
             data.Close();
             MessageBox.Show("Thanks for submitting :)");
         }
@@ -160,7 +165,7 @@ namespace Contact_Tracing_Form
             try
             {
                 int monthVar = Int32.Parse(monthInput.Text);
-                int dayVar = Int32.Parse(dayInput.Text); ;
+                int dayVar = Int32.Parse(dayInput.Text);
                 int yearVar = Int32.Parse(yearInput.Text);
                 write();
                 reset();
@@ -172,12 +177,101 @@ namespace Contact_Tracing_Form
             }
             
         }
+
+        class Person
+        {
+            public string idW { get; set; }
+            public string dateW { get; set; }
+            public string timeW { get; set; }
+            public string nameW { get; set; }
+            public string contactNoW { get; set; }
+            public string emailW { get; set; }
+            public string zipCodeW { get; set; }
+            public string barangayW { get; set; }
+            public string cityW { get; set; }
+            public string regionW { get; set; }
+            public string temperatureW { get; set; }
+            public string Q1W { get; set; }
+            public string Q2W { get; set; }
+            public string Q3W { get; set; }
+            public string Q4W { get; set; }
+
+        }
         
+        List<Person> personList = new List<Person>();
+
         private void reader()
         {
             StreamReader streamReader = File.OpenText(@"C:\Users\Public\Desktop\test\data.txt");
-            trial.Text = streamReader.ReadToEnd();
+
+            int tick = 0;
+            while (!(streamReader.EndOfStream))
+            {
+                personList.Add(new Person
+                {
+                    idW = streamReader.ReadLine(),
+                    dateW = streamReader.ReadLine(),
+                    timeW = streamReader.ReadLine(),
+                    nameW = streamReader.ReadLine(),
+                    contactNoW = streamReader.ReadLine(),
+                    emailW = streamReader.ReadLine(),
+                    zipCodeW = streamReader.ReadLine(),
+                    barangayW = streamReader.ReadLine(),
+                    cityW = streamReader.ReadLine(),
+                    regionW = streamReader.ReadLine(),
+                    temperatureW = streamReader.ReadLine(),
+                    Q1W = streamReader.ReadLine(),
+                    Q2W = streamReader.ReadLine(),
+                    Q3W = streamReader.ReadLine(),
+                    Q4W = streamReader.ReadLine(),
+                });
+                tick = tick + 1;
+            }
+
+            string searchVal = yearSearch.Text + monthSearch.Text + daySearch.Text;
+            for (int run = 0; run < tick; run++)
+            {
+                if (personList[run].idW.ToString() == searchVal)
+                {
+                    string newLine = Environment.NewLine;
+                    recordDisplay.AppendText(personList[run].dateW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].timeW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].nameW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].contactNoW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].emailW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].zipCodeW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].barangayW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].cityW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].regionW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].temperatureW.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].Q1W.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].Q2W.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].Q3W.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(personList[run].Q4W.ToString());
+                    recordDisplay.AppendText(newLine);
+                    recordDisplay.AppendText(newLine);
+                }  
+            }
+            
+            
         }
 
+        private void search_Click(object sender, EventArgs e)
+        {
+            reader();
+        }
     }
 }
