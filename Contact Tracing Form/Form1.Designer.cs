@@ -90,6 +90,7 @@
             this.firstName = new System.Windows.Forms.Label();
             this.fnInput = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
+            this.listAll = new System.Windows.Forms.Button();
             this.header.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.body.SuspendLayout();
@@ -194,6 +195,7 @@
             // recordPanel
             // 
             this.recordPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.recordPanel.Controls.Add(this.listAll);
             this.recordPanel.Controls.Add(this.yearSearch);
             this.recordPanel.Controls.Add(this.search);
             this.recordPanel.Controls.Add(this.label1);
@@ -771,6 +773,19 @@
             this.title.TabIndex = 0;
             this.title.Text = "CONTACT INFORMATION";
             // 
+            // listAll
+            // 
+            this.listAll.BackColor = System.Drawing.Color.White;
+            this.listAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.listAll.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listAll.Location = new System.Drawing.Point(328, 7);
+            this.listAll.Name = "listAll";
+            this.listAll.Size = new System.Drawing.Size(110, 28);
+            this.listAll.TabIndex = 40;
+            this.listAll.Text = "LIST ALL";
+            this.listAll.UseVisualStyleBackColor = false;
+            this.listAll.Click += new System.EventHandler(this.listAll_Click);
+            // 
             // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -871,5 +886,6 @@
         private Label label2;
         private TextBox monthSearch;
         internal TextBox recordDisplay;
+        private Button listAll;
     }
 }

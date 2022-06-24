@@ -178,9 +178,10 @@ namespace Contact_Tracing_Form
             
         }
 
+        // Individual 
         class Person
         {
-            public string idW { get; set; }
+            public int idW { get; set; }
             public string dateW { get; set; }
             public string timeW { get; set; }
             public string nameW { get; set; }
@@ -198,9 +199,13 @@ namespace Contact_Tracing_Form
 
         }
         
+        // LIST OF INDIVIDUAL
+
         List<Person> personList = new List<Person>();
 
-        private void reader()
+
+        // SEARCH FUNCTION
+        private void searchFunc()
         {
             StreamReader streamReader = File.OpenText(@"C:\Users\Public\Desktop\test\data.txt");
 
@@ -209,7 +214,7 @@ namespace Contact_Tracing_Form
             {
                 personList.Add(new Person
                 {
-                    idW = streamReader.ReadLine(),
+                    idW = Int32.Parse(streamReader.ReadLine()),
                     dateW = streamReader.ReadLine(),
                     timeW = streamReader.ReadLine(),
                     nameW = streamReader.ReadLine(),
@@ -268,6 +273,8 @@ namespace Contact_Tracing_Form
             
             
         }
+
+        // SEARCH BUTTON
         int turn = 0;
         private void search_Click(object sender, EventArgs e)
         {
@@ -275,16 +282,85 @@ namespace Contact_Tracing_Form
             if (turn == 1)
             {
                 recordDisplay.Text = "";
-                reader();
+                searchFunc();
             }
             if (turn == 2)
             {
                 recordDisplay.Text = "";
                 turn = 0;
-                reader();
+                searchFunc();
                 
             }
             
+        }
+
+        private void organizeList()
+        {
+            StreamReader streamReader = File.OpenText(@"C:\Users\Public\Desktop\test\data.txt");
+
+            while (!(streamReader.EndOfStream))
+            {
+                personList.Add(new Person
+                {
+                    idW = int.Parse(streamReader.ReadLine()),
+                    dateW = streamReader.ReadLine(),
+                    timeW = streamReader.ReadLine(),
+                    nameW = streamReader.ReadLine(),
+                    contactNoW = streamReader.ReadLine(),
+                    emailW = streamReader.ReadLine(),
+                    zipCodeW = streamReader.ReadLine(),
+                    barangayW = streamReader.ReadLine(),
+                    cityW = streamReader.ReadLine(),
+                    regionW = streamReader.ReadLine(),
+                    temperatureW = streamReader.ReadLine(),
+                    Q1W = streamReader.ReadLine(),
+                    Q2W = streamReader.ReadLine(),
+                    Q3W = streamReader.ReadLine(),
+                    Q4W = streamReader.ReadLine(),
+                });
+            }
+
+            personList = personList.OrderBy(x => x.idW).ToList();
+        }
+        
+        private void listAll_Click(object sender, EventArgs e)
+        {
+            organizeList();
+            recordDisplay.Text = "";
+
+            for (int play = 0; play < personList.Count - 1; play++)
+            {
+                string newLine = Environment.NewLine;
+                recordDisplay.AppendText(personList[play].dateW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].timeW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].nameW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].contactNoW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].emailW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].zipCodeW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].barangayW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].cityW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].regionW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].temperatureW.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].Q1W.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].Q2W.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].Q3W.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(personList[play].Q4W.ToString());
+                recordDisplay.AppendText(newLine);
+                recordDisplay.AppendText(newLine);
+            }
         }
     }
 }
