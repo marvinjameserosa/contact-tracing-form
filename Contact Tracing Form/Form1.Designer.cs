@@ -93,8 +93,10 @@
             this.fnInput = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
             this.qrScannerPannel = new System.Windows.Forms.Panel();
+            this.scan = new System.Windows.Forms.Button();
+            this.cameraFeed = new System.Windows.Forms.PictureBox();
+            this.cameraTitle = new System.Windows.Forms.Label();
             this.cameraChoice = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.header.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.body.SuspendLayout();
@@ -106,6 +108,7 @@
             this.Q1panel.SuspendLayout();
             this.contactInfo.SuspendLayout();
             this.qrScannerPannel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cameraFeed)).BeginInit();
             this.SuspendLayout();
             // 
             // mainTitle
@@ -808,7 +811,9 @@
             // qrScannerPannel
             // 
             this.qrScannerPannel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.qrScannerPannel.Controls.Add(this.label3);
+            this.qrScannerPannel.Controls.Add(this.scan);
+            this.qrScannerPannel.Controls.Add(this.cameraFeed);
+            this.qrScannerPannel.Controls.Add(this.cameraTitle);
             this.qrScannerPannel.Controls.Add(this.cameraChoice);
             this.qrScannerPannel.Location = new System.Drawing.Point(394, 151);
             this.qrScannerPannel.Name = "qrScannerPannel";
@@ -816,24 +821,46 @@
             this.qrScannerPannel.TabIndex = 41;
             this.qrScannerPannel.Visible = false;
             // 
+            // scan
+            // 
+            this.scan.BackColor = System.Drawing.Color.White;
+            this.scan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.scan.Location = new System.Drawing.Point(186, 318);
+            this.scan.Name = "scan";
+            this.scan.Size = new System.Drawing.Size(110, 27);
+            this.scan.TabIndex = 41;
+            this.scan.Text = "SCAN";
+            this.scan.UseVisualStyleBackColor = false;
+            this.scan.Click += new System.EventHandler(this.scan_Click);
+            // 
+            // cameraFeed
+            // 
+            this.cameraFeed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cameraFeed.Location = new System.Drawing.Point(25, 54);
+            this.cameraFeed.Name = "cameraFeed";
+            this.cameraFeed.Size = new System.Drawing.Size(427, 255);
+            this.cameraFeed.TabIndex = 40;
+            this.cameraFeed.TabStop = false;
+            // 
+            // cameraTitle
+            // 
+            this.cameraTitle.AutoSize = true;
+            this.cameraTitle.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cameraTitle.ForeColor = System.Drawing.Color.Black;
+            this.cameraTitle.Location = new System.Drawing.Point(25, 24);
+            this.cameraTitle.Name = "cameraTitle";
+            this.cameraTitle.Size = new System.Drawing.Size(62, 17);
+            this.cameraTitle.TabIndex = 39;
+            this.cameraTitle.Text = "CAMERA:";
+            // 
             // cameraChoice
             // 
             this.cameraChoice.FormattingEnabled = true;
-            this.cameraChoice.Location = new System.Drawing.Point(93, 9);
+            this.cameraChoice.Location = new System.Drawing.Point(93, 17);
             this.cameraChoice.Name = "cameraChoice";
             this.cameraChoice.Size = new System.Drawing.Size(121, 23);
             this.cameraChoice.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(25, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 17);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "CAMERA:";
             // 
             // index
             // 
@@ -870,6 +897,7 @@
             this.contactInfo.PerformLayout();
             this.qrScannerPannel.ResumeLayout(false);
             this.qrScannerPannel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cameraFeed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -942,7 +970,9 @@
         private Button listAll;
         private Button qrNav;
         private Panel qrScannerPannel;
-        private Label label3;
+        private Label cameraTitle;
         private ComboBox cameraChoice;
+        private Button scan;
+        private PictureBox cameraFeed;
     }
 }

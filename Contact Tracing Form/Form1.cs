@@ -404,6 +404,17 @@ namespace Contact_Tracing_Form
             }
         }
 
-      
+        // SCAN FUNCTION
+        private void scan_Click(object sender, EventArgs e)
+        {
+            captureDevice = new VideoCaptureDevice(filterInfo[cameraChoice.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += CaptureDevice_NewFrame;
+            captureDevice.Start();
+        }
+
+        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            cameraFeed.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
     }
 }
