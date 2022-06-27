@@ -1,0 +1,23 @@
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\Contact Tracing Form.exe.config
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\Contact Tracing Form.exe
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\Contact Tracing Form.pdb
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\AForge.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\AForge.Video.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\zxing.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\zxing.presentation.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\AForge.xml
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\AForge.Video.xml
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\zxing.xml
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\zxing.presentation.xml
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact Tracing Form.csproj.AssemblyReference.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact Tracing Form.csproj.SuggestedBindingRedirects.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact_Tracing_Form.pageContactTracing.resources
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact_Tracing_Form.pageQRScanner.resources
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact_Tracing_Form.Properties.Resources.resources
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact Tracing Form.csproj.GenerateResource.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact Tracing Form.csproj.CoreCompileInputs.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact Tracing Form.csproj.CopyComplete
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact Tracing Form.exe
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\Contact Tracing Form.pdb
