@@ -33,9 +33,11 @@
             this.contactInfoNav = new System.Windows.Forms.Button();
             this.healthQuestionnaireNav = new System.Windows.Forms.Button();
             this.navPanel = new System.Windows.Forms.Panel();
+            this.qrNav = new System.Windows.Forms.Button();
             this.recordNav = new System.Windows.Forms.Button();
             this.body = new System.Windows.Forms.Panel();
             this.recordPanel = new System.Windows.Forms.Panel();
+            this.listAll = new System.Windows.Forms.Button();
             this.yearSearch = new System.Windows.Forms.TextBox();
             this.search = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,7 +92,11 @@
             this.firstName = new System.Windows.Forms.Label();
             this.fnInput = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
-            this.listAll = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.header.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.body.SuspendLayout();
@@ -101,6 +107,7 @@
             this.Q2panel.SuspendLayout();
             this.Q1panel.SuspendLayout();
             this.contactInfo.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTitle
@@ -121,7 +128,7 @@
             this.header.AutoSize = true;
             this.header.BackColor = System.Drawing.Color.Black;
             this.header.Controls.Add(this.mainTitle);
-            this.header.Location = new System.Drawing.Point(0, 0);
+            this.header.Location = new System.Drawing.Point(609, 0);
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(635, 75);
             this.header.TabIndex = 0;
@@ -131,9 +138,9 @@
             this.contactInfoNav.BackColor = System.Drawing.Color.White;
             this.contactInfoNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactInfoNav.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.contactInfoNav.Location = new System.Drawing.Point(31, 14);
+            this.contactInfoNav.Location = new System.Drawing.Point(57, 6);
             this.contactInfoNav.Name = "contactInfoNav";
-            this.contactInfoNav.Size = new System.Drawing.Size(134, 54);
+            this.contactInfoNav.Size = new System.Drawing.Size(181, 35);
             this.contactInfoNav.TabIndex = 9;
             this.contactInfoNav.Text = "CONTACT INFORMATION";
             this.contactInfoNav.UseVisualStyleBackColor = false;
@@ -144,9 +151,9 @@
             this.healthQuestionnaireNav.BackColor = System.Drawing.Color.White;
             this.healthQuestionnaireNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.healthQuestionnaireNav.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.healthQuestionnaireNav.Location = new System.Drawing.Point(178, 14);
+            this.healthQuestionnaireNav.Location = new System.Drawing.Point(247, 6);
             this.healthQuestionnaireNav.Name = "healthQuestionnaireNav";
-            this.healthQuestionnaireNav.Size = new System.Drawing.Size(134, 54);
+            this.healthQuestionnaireNav.Size = new System.Drawing.Size(188, 35);
             this.healthQuestionnaireNav.TabIndex = 10;
             this.healthQuestionnaireNav.Text = "HEALTH QUESTIONNAIRE";
             this.healthQuestionnaireNav.UseVisualStyleBackColor = false;
@@ -155,22 +162,36 @@
             // navPanel
             // 
             this.navPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.navPanel.Controls.Add(this.qrNav);
             this.navPanel.Controls.Add(this.recordNav);
             this.navPanel.Controls.Add(this.healthQuestionnaireNav);
             this.navPanel.Controls.Add(this.contactInfoNav);
-            this.navPanel.Location = new System.Drawing.Point(73, 563);
+            this.navPanel.Location = new System.Drawing.Point(682, 552);
             this.navPanel.Name = "navPanel";
-            this.navPanel.Size = new System.Drawing.Size(490, 81);
+            this.navPanel.Size = new System.Drawing.Size(490, 92);
             this.navPanel.TabIndex = 0;
+            // 
+            // qrNav
+            // 
+            this.qrNav.BackColor = System.Drawing.Color.White;
+            this.qrNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qrNav.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.qrNav.Location = new System.Drawing.Point(57, 50);
+            this.qrNav.Name = "qrNav";
+            this.qrNav.Size = new System.Drawing.Size(181, 35);
+            this.qrNav.TabIndex = 12;
+            this.qrNav.Text = "QR CODE SCANNER";
+            this.qrNav.UseVisualStyleBackColor = false;
+            this.qrNav.Click += new System.EventHandler(this.qrNav_Click);
             // 
             // recordNav
             // 
             this.recordNav.BackColor = System.Drawing.Color.White;
             this.recordNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.recordNav.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.recordNav.Location = new System.Drawing.Point(326, 14);
+            this.recordNav.Location = new System.Drawing.Point(247, 50);
             this.recordNav.Name = "recordNav";
-            this.recordNav.Size = new System.Drawing.Size(134, 54);
+            this.recordNav.Size = new System.Drawing.Size(188, 35);
             this.recordNav.TabIndex = 11;
             this.recordNav.Text = "RECORDS";
             this.recordNav.UseVisualStyleBackColor = false;
@@ -187,7 +208,7 @@
             this.body.Controls.Add(this.contactInfo);
             this.body.Controls.Add(this.title);
             this.body.ForeColor = System.Drawing.Color.Black;
-            this.body.Location = new System.Drawing.Point(73, 110);
+            this.body.Location = new System.Drawing.Point(682, 110);
             this.body.Name = "body";
             this.body.Size = new System.Drawing.Size(490, 422);
             this.body.TabIndex = 0;
@@ -208,6 +229,19 @@
             this.recordPanel.Size = new System.Drawing.Size(486, 351);
             this.recordPanel.TabIndex = 38;
             this.recordPanel.Visible = false;
+            // 
+            // listAll
+            // 
+            this.listAll.BackColor = System.Drawing.Color.White;
+            this.listAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.listAll.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listAll.Location = new System.Drawing.Point(328, 7);
+            this.listAll.Name = "listAll";
+            this.listAll.Size = new System.Drawing.Size(110, 28);
+            this.listAll.TabIndex = 40;
+            this.listAll.Text = "LIST ALL";
+            this.listAll.UseVisualStyleBackColor = false;
+            this.listAll.Click += new System.EventHandler(this.listAll_Click);
             // 
             // yearSearch
             // 
@@ -773,25 +807,64 @@
             this.title.TabIndex = 0;
             this.title.Text = "CONTACT INFORMATION";
             // 
-            // listAll
+            // panel1
             // 
-            this.listAll.BackColor = System.Drawing.Color.White;
-            this.listAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.listAll.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listAll.Location = new System.Drawing.Point(328, 7);
-            this.listAll.Name = "listAll";
-            this.listAll.Size = new System.Drawing.Size(110, 28);
-            this.listAll.TabIndex = 40;
-            this.listAll.Text = "LIST ALL";
-            this.listAll.UseVisualStyleBackColor = false;
-            this.listAll.Click += new System.EventHandler(this.listAll_Click);
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Location = new System.Drawing.Point(104, 168);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(486, 351);
+            this.panel1.TabIndex = 41;
+            this.panel1.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(126, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 19);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "/";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(88, 12);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PlaceholderText = " DD";
+            this.textBox2.Size = new System.Drawing.Size(32, 23);
+            this.textBox2.TabIndex = 28;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(68, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 19);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "/";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(28, 12);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.PlaceholderText = " MM";
+            this.textBox4.Size = new System.Drawing.Size(35, 23);
+            this.textBox4.TabIndex = 26;
             // 
             // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(634, 656);
+            this.ClientSize = new System.Drawing.Size(1853, 656);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.body);
             this.Controls.Add(this.navPanel);
             this.Controls.Add(this.header);
@@ -817,6 +890,8 @@
             this.Q1panel.PerformLayout();
             this.contactInfo.ResumeLayout(false);
             this.contactInfo.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -887,5 +962,11 @@
         private TextBox monthSearch;
         internal TextBox recordDisplay;
         private Button listAll;
+        private Button qrNav;
+        private Panel panel1;
+        private Label label3;
+        private TextBox textBox2;
+        private Label label4;
+        private TextBox textBox4;
     }
 }

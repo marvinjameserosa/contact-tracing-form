@@ -12,7 +12,7 @@ namespace Contact_Tracing_Form
         private void contactInfoNav_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Contact Tracing Form";
-            mainTitle.Left = this.Width / 2 - 123;
+            mainTitle.Location = new Point(201, 18);
             title.Text = "CONTACT INFORMATION";
             contactInfo.Visible = true;
             healthQuestionnaire.Visible = false;
@@ -23,7 +23,7 @@ namespace Contact_Tracing_Form
         private void healthQuestionnaireNav_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Contact Tracing Form";
-            mainTitle.Left = this.Width / 2 - 123;
+            mainTitle.Location = new Point(201, 18);
             title.Text = "HEALTH QUESTIONNAIRE";
             contactInfo.Visible = false;
             healthQuestionnaire.Visible = true;
@@ -31,10 +31,21 @@ namespace Contact_Tracing_Form
             submitBTN.Visible = true;
         }
 
+        private void qrNav_Click(object sender, EventArgs e)
+        {
+            mainTitle.Text = "Contact Tracing Form";
+            mainTitle.Location = new Point(201, 18);
+            title.Text = "QR CODE SCANNER";
+            contactInfo.Visible = false;
+            healthQuestionnaire.Visible = false;
+            recordPanel.Visible = false;
+            submitBTN.Visible = false;
+        }
+
         private void recordNav_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Copy of Records";
-            mainTitle.Left = this.Width / 2 - 95;
+            mainTitle.Location = new Point(223, 18);
             title.Text = "RECORDS";
             contactInfo.Visible = false;
             healthQuestionnaire.Visible = false;
@@ -42,6 +53,11 @@ namespace Contact_Tracing_Form
             submitBTN.Visible = false;
             
         }
+
+        // LOCATION
+
+        string location = @"C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Data\data.txt";
+
         // SAVE FUNCTION
 
         private void submitBTN_Click(object sender, EventArgs e)
@@ -51,7 +67,7 @@ namespace Contact_Tracing_Form
 
         private void write()
         {
-            StreamWriter data = new StreamWriter(@"C:\Users\Public\Desktop\test\data.txt", true);
+            StreamWriter data = new StreamWriter(location, true);
 
             // ID
             data.Write(yearInput.Text);
@@ -159,6 +175,7 @@ namespace Contact_Tracing_Form
                 MessageBox.Show("Please check if everything is filled out");
             }
         }
+
         // DATE CHECKER
         private void datechecker()
         {
@@ -207,7 +224,7 @@ namespace Contact_Tracing_Form
         // SEARCH FUNCTION
         private void searchFunc()
         {
-            StreamReader streamReader = File.OpenText(@"C:\Users\Public\Desktop\test\data.txt");
+            StreamReader streamReader = File.OpenText(location);
 
             int tick = 0;
             while (!(streamReader.EndOfStream))
@@ -294,9 +311,10 @@ namespace Contact_Tracing_Form
             
         }
 
+        // SEQUENCER
         private void organizeList()
         {
-            StreamReader streamReader = File.OpenText(@"C:\Users\Public\Desktop\test\data.txt");
+            StreamReader streamReader = File.OpenText(location);
 
             while (!(streamReader.EndOfStream))
             {
@@ -323,12 +341,14 @@ namespace Contact_Tracing_Form
             personList = personList.OrderBy(x => x.idW).ToList();
         }
         
+        // LIST ALL FUNCTION
+
         private void listAll_Click(object sender, EventArgs e)
         {
             organizeList();
-            recordDisplay.Text = "";
+            recordDisplay.Text = "";        
 
-            for (int play = 0; play < personList.Count - 1; play++)
+            for (int play = 0; play < personList.Count; play++)
             {
                 string newLine = Environment.NewLine;
                 recordDisplay.AppendText(personList[play].dateW.ToString());
@@ -362,5 +382,7 @@ namespace Contact_Tracing_Form
                 recordDisplay.AppendText(newLine);
             }
         }
+
+
     }
 }
