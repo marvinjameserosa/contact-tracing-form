@@ -32,3 +32,8 @@ C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\C
 C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.pdb
 C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.genruntimeconfig.cache
 C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\ref\Contact Tracing Form.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\AForge.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\AForge.Video.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\AForge.Video.DirectShow.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\bin\Debug\net6.0-windows\zxing.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Contact Tracing Form\Contact Tracing Form\obj\Debug\net6.0-windows\Contact Tracing Form.csproj.CopyComplete

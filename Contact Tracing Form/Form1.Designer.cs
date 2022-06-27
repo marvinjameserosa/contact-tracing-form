@@ -92,11 +92,9 @@
             this.firstName = new System.Windows.Forms.Label();
             this.fnInput = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.qrScannerPannel = new System.Windows.Forms.Panel();
+            this.cameraChoice = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.header.SuspendLayout();
             this.navPanel.SuspendLayout();
             this.body.SuspendLayout();
@@ -107,7 +105,7 @@
             this.Q2panel.SuspendLayout();
             this.Q1panel.SuspendLayout();
             this.contactInfo.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.qrScannerPannel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTitle
@@ -128,7 +126,7 @@
             this.header.AutoSize = true;
             this.header.BackColor = System.Drawing.Color.Black;
             this.header.Controls.Add(this.mainTitle);
-            this.header.Location = new System.Drawing.Point(609, 0);
+            this.header.Location = new System.Drawing.Point(1023, 0);
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(635, 75);
             this.header.TabIndex = 0;
@@ -166,7 +164,7 @@
             this.navPanel.Controls.Add(this.recordNav);
             this.navPanel.Controls.Add(this.healthQuestionnaireNav);
             this.navPanel.Controls.Add(this.contactInfoNav);
-            this.navPanel.Location = new System.Drawing.Point(682, 552);
+            this.navPanel.Location = new System.Drawing.Point(1096, 552);
             this.navPanel.Name = "navPanel";
             this.navPanel.Size = new System.Drawing.Size(490, 92);
             this.navPanel.TabIndex = 0;
@@ -208,7 +206,7 @@
             this.body.Controls.Add(this.contactInfo);
             this.body.Controls.Add(this.title);
             this.body.ForeColor = System.Drawing.Color.Black;
-            this.body.Location = new System.Drawing.Point(682, 110);
+            this.body.Location = new System.Drawing.Point(1096, 110);
             this.body.Name = "body";
             this.body.Size = new System.Drawing.Size(490, 422);
             this.body.TabIndex = 0;
@@ -807,70 +805,50 @@
             this.title.TabIndex = 0;
             this.title.Text = "CONTACT INFORMATION";
             // 
-            // panel1
+            // qrScannerPannel
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Location = new System.Drawing.Point(104, 168);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(486, 351);
-            this.panel1.TabIndex = 41;
-            this.panel1.Visible = false;
+            this.qrScannerPannel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.qrScannerPannel.Controls.Add(this.label3);
+            this.qrScannerPannel.Controls.Add(this.cameraChoice);
+            this.qrScannerPannel.Location = new System.Drawing.Point(394, 151);
+            this.qrScannerPannel.Name = "qrScannerPannel";
+            this.qrScannerPannel.Size = new System.Drawing.Size(486, 351);
+            this.qrScannerPannel.TabIndex = 41;
+            this.qrScannerPannel.Visible = false;
+            // 
+            // cameraChoice
+            // 
+            this.cameraChoice.FormattingEnabled = true;
+            this.cameraChoice.Location = new System.Drawing.Point(93, 9);
+            this.cameraChoice.Name = "cameraChoice";
+            this.cameraChoice.Size = new System.Drawing.Size(121, 23);
+            this.cameraChoice.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(126, 14);
+            this.label3.Location = new System.Drawing.Point(25, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 19);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "/";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(88, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = " DD";
-            this.textBox2.Size = new System.Drawing.Size(32, 23);
-            this.textBox2.TabIndex = 28;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(68, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 19);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "/";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(28, 12);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = " MM";
-            this.textBox4.Size = new System.Drawing.Size(35, 23);
-            this.textBox4.TabIndex = 26;
+            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "CAMERA:";
             // 
             // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1853, 656);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(2680, 656);
+            this.Controls.Add(this.qrScannerPannel);
             this.Controls.Add(this.body);
             this.Controls.Add(this.navPanel);
             this.Controls.Add(this.header);
             this.Name = "index";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Tracing Form";
+            this.Load += new System.EventHandler(this.index_Load);
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
             this.navPanel.ResumeLayout(false);
@@ -890,8 +868,8 @@
             this.Q1panel.PerformLayout();
             this.contactInfo.ResumeLayout(false);
             this.contactInfo.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.qrScannerPannel.ResumeLayout(false);
+            this.qrScannerPannel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -963,10 +941,8 @@
         internal TextBox recordDisplay;
         private Button listAll;
         private Button qrNav;
-        private Panel panel1;
+        private Panel qrScannerPannel;
         private Label label3;
-        private TextBox textBox2;
-        private Label label4;
-        private TextBox textBox4;
+        private ComboBox cameraChoice;
     }
 }

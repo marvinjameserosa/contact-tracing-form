@@ -1,3 +1,6 @@
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
 namespace Contact_Tracing_Form
 {
     public partial class index : Form
@@ -7,8 +10,22 @@ namespace Contact_Tracing_Form
             InitializeComponent();
         }
 
+        // CAMERA CHOICE
+
+        FilterInfoCollection filterInfo;
+        VideoCaptureDevice captureDevice;
+        private void index_Load(object sender, EventArgs e)
+        {
+            filterInfo = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filter in filterInfo)
+            {
+                cameraChoice.Items.Add(filter.Name);
+            }
+            cameraChoice.SelectedIndex = 0;
+        }
+
         // NAVIGATION PANEL
-        
+
         private void contactInfoNav_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Contact Tracing Form";
@@ -16,6 +33,7 @@ namespace Contact_Tracing_Form
             title.Text = "CONTACT INFORMATION";
             contactInfo.Visible = true;
             healthQuestionnaire.Visible = false;
+            qrScannerPannel.Visible = false;
             recordPanel.Visible = false;
             submitBTN.Visible = false;
         }
@@ -27,6 +45,7 @@ namespace Contact_Tracing_Form
             title.Text = "HEALTH QUESTIONNAIRE";
             contactInfo.Visible = false;
             healthQuestionnaire.Visible = true;
+            qrScannerPannel.Visible = false;
             recordPanel.Visible = false;
             submitBTN.Visible = true;
         }
@@ -38,6 +57,7 @@ namespace Contact_Tracing_Form
             title.Text = "QR CODE SCANNER";
             contactInfo.Visible = false;
             healthQuestionnaire.Visible = false;
+            qrScannerPannel.Visible = true;
             recordPanel.Visible = false;
             submitBTN.Visible = false;
         }
@@ -49,6 +69,7 @@ namespace Contact_Tracing_Form
             title.Text = "RECORDS";
             contactInfo.Visible = false;
             healthQuestionnaire.Visible = false;
+            qrScannerPannel.Visible = false;
             recordPanel.Visible = true;
             submitBTN.Visible = false;
             
@@ -383,6 +404,6 @@ namespace Contact_Tracing_Form
             }
         }
 
-
+      
     }
 }
