@@ -36,12 +36,11 @@ namespace Contact_Tracing_Form
 
         private void btnScan_Click(object sender, EventArgs e)
         {
-            
+            File.Delete(@"C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Data\databaseQR.txt");
             captureDevice = new VideoCaptureDevice(filterInfo[cameraChoice.SelectedIndex].MonikerString);
             captureDevice.NewFrame += CaptureDevice_NewFrame;
             captureDevice.Start();
             timer.Start();
-           
         }
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
@@ -56,12 +55,12 @@ namespace Contact_Tracing_Form
             }
         }
 
-        
-
         private void timerFunc(object sender, EventArgs e)
         {
+            
 
-            StreamWriter writer = new StreamWriter(@"C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Data\remus.txt", true);
+            
+            
 
             if (cameraFeed.Image != null)
             {
@@ -71,28 +70,18 @@ namespace Contact_Tracing_Form
 
                 if (result != null)
                 {
-                    writer.WriteLine(result.ToString());
+                    StreamWriter writer = new StreamWriter(@"C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Data\databaseQR.txt", true);
+                    writer.Write(result.ToString());
                     writer.Close();
-                    MessageBox.Show("Thank you for cooperating :)");
-                    pageContactTracing pageContactTracing = new pageContactTracing();
-                    pageContactTracing.Show();
-                    this.Hide();
-                    timer.Stop();
-
-                    if (captureDevice.IsRunning)
-                    {
-                        captureDevice.Stop();
-                    }
+                    btnBack.PerformClick();
                 }
             }
-            writer.Close();
-
         }
 
-       
         private void btnBack_Click(object sender, EventArgs e)
         {
             pageContactTracing pageContactTracing = new pageContactTracing();
+            pageContactTracing.autofill();
             pageContactTracing.Show();
             this.Hide();
         }

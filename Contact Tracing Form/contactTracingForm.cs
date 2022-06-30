@@ -42,6 +42,7 @@ namespace Contact_Tracing_Form
 
         private void btnPageQRScanner_Click(object sender, EventArgs e)
         {
+           
             pageQRScanner pageQRScanner = new pageQRScanner();
 
             pageQRScanner.Show();
@@ -65,7 +66,7 @@ namespace Contact_Tracing_Form
 
         // LOCATION
 
-        string location = @"C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Contact Tracing Form\Data\remus.txt";
+        string location = @"C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Data\database.txt";
 
         // SAVE FUNCTION
 
@@ -386,6 +387,59 @@ namespace Contact_Tracing_Form
             }
         }
 
+        public void autofill()
+        {
+            StreamReader streamReader = File.OpenText(@"C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Contact Tracing Form\Data\databaseQR.txt");
+            fnInput.Text = streamReader.ReadLine();
+            lnInput.Text = streamReader.ReadLine();
+            cnInput.Text = streamReader.ReadLine();
+            eaInput.Text = streamReader.ReadLine();
+            zcInput.Text = streamReader.ReadLine();
+            brgyInput.Text = streamReader.ReadLine();
+            cityInput.Text = streamReader.ReadLine();
+            regInput.Text = streamReader.ReadLine();
+            tempInput.Text = streamReader.ReadLine();
+            timeInput.Text = streamReader.ReadLine();
+            monthInput.Text = streamReader.ReadLine();
+            dayInput.Text = streamReader.ReadLine();
+            yearInput.Text = streamReader.ReadLine();
+            string q1 = streamReader.ReadLine().ToString();
+            string q2 = streamReader.ReadLine().ToString();
+            string q3 = streamReader.ReadLine().ToString();
+            string q4 = streamReader.ReadLine().ToString();
+            if (q1 == "YES")
+            {
+                Q1Y.Checked = true;
+            }
+            if (q1 == "NO")
+            {
+                Q1N.Checked = true;
+            }
+            if (q2 == "YES")
+            {
+                Q2Y.Checked = true;
+            }
+            if (q2 == "NO")
+            {
+                Q2N.Checked = true;
+            }
+            if (q3 == "YES")
+            {
+                Q3Y.Checked = true;
+            }
+            if (q3 == "NO")
+            {
+                Q3N.Checked = true;
+            }
+            if (q4 == "YES")
+            {
+                Q4Y.Checked = true;
+            }
+            if (q4 == "NO")
+            {
+                Q4N.Checked = true;
+            }
+        }
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             datachecker();
